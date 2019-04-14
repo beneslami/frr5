@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="babeld">
+        <in>babel_filter.c</in>
+        <in>babel_interface.c</in>
+        <in>babel_main.c</in>
+        <in>babel_memory.c</in>
+        <in>babel_zebra.c</in>
+        <in>babeld.c</in>
+        <in>kernel.c</in>
+        <in>message.c</in>
+        <in>neighbour.c</in>
+        <in>net.c</in>
+        <in>resend.c</in>
+        <in>route.c</in>
+        <in>source.c</in>
+        <in>util.c</in>
+        <in>xroute.c</in>
+      </df>
+      <df name="bgpd">
+        <df name="rfapi">
+          <in>bgp_rfapi_cfg.c</in>
+          <in>rfapi.c</in>
+          <in>rfapi_ap.c</in>
+          <in>rfapi_descriptor_rfp_utils.c</in>
+          <in>rfapi_encap_tlv.c</in>
+          <in>rfapi_import.c</in>
+          <in>rfapi_monitor.c</in>
+          <in>rfapi_nve_addr.c</in>
+          <in>rfapi_rib.c</in>
+          <in>rfapi_vty.c</in>
+          <in>vnc_debug.c</in>
+          <in>vnc_export_bgp.c</in>
+          <in>vnc_export_table.c</in>
+          <in>vnc_import_bgp.c</in>
+          <in>vnc_zebra.c</in>
+        </df>
+        <df name="rfp-example">
+          <df name="librfp">
+            <in>rfp_example.c</in>
+          </df>
+          <df name="rfptest">
+            <in>rfptest.c</in>
+          </df>
+        </df>
+        <in>bgp_advertise.c</in>
+        <in>bgp_aspath.c</in>
+        <in>bgp_attr.c</in>
+        <in>bgp_attr_evpn.c</in>
+        <in>bgp_bfd.c</in>
+        <in>bgp_btoa.c</in>
+        <in>bgp_clist.c</in>
+        <in>bgp_community.c</in>
+        <in>bgp_damp.c</in>
+        <in>bgp_debug.c</in>
+        <in>bgp_dump.c</in>
+        <in>bgp_ecommunity.c</in>
+        <in>bgp_encap_tlv.c</in>
+        <in>bgp_evpn.c</in>
+        <in>bgp_evpn_vty.c</in>
+        <in>bgp_filter.c</in>
+        <in>bgp_flowspec.c</in>
+        <in>bgp_flowspec_util.c</in>
+        <in>bgp_flowspec_vty.c</in>
+        <in>bgp_fsm.c</in>
+        <in>bgp_io.c</in>
+        <in>bgp_keepalives.c</in>
+        <in>bgp_label.c</in>
+        <in>bgp_labelpool.c</in>
+        <in>bgp_lcommunity.c</in>
+        <in>bgp_main.c</in>
+        <in>bgp_memory.c</in>
+        <in>bgp_mpath.c</in>
+        <in>bgp_mplsvpn.c</in>
+        <in>bgp_network.c</in>
+        <in>bgp_nexthop.c</in>
+        <in>bgp_nht.c</in>
+        <in>bgp_open.c</in>
+        <in>bgp_packet.c</in>
+        <in>bgp_pbr.c</in>
+        <in>bgp_rd.c</in>
+        <in>bgp_regex.c</in>
+        <in>bgp_route.c</in>
+        <in>bgp_route_clippy.c</in>
+        <in>bgp_routemap.c</in>
+        <in>bgp_rpki.c</in>
+        <in>bgp_snmp.c</in>
+        <in>bgp_table.c</in>
+        <in>bgp_updgrp.c</in>
+        <in>bgp_updgrp_adv.c</in>
+        <in>bgp_updgrp_packet.c</in>
+        <in>bgp_vpn.c</in>
+        <in>bgp_vty.c</in>
+        <in>bgp_vty_clippy.c</in>
+        <in>bgp_zebra.c</in>
+        <in>bgpd.c</in>
+        <in>newfile.c</in>
+      </df>
+      <df name="eigrpd">
+        <in>eigrp_dump.c</in>
+        <in>eigrp_filter.c</in>
+        <in>eigrp_fsm.c</in>
+        <in>eigrp_hello.c</in>
+        <in>eigrp_interface.c</in>
+        <in>eigrp_main.c</in>
+        <in>eigrp_memory.c</in>
+        <in>eigrp_neighbor.c</in>
+        <in>eigrp_network.c</in>
+        <in>eigrp_packet.c</in>
+        <in>eigrp_pkt_tlv1.c</in>
+        <in>eigrp_pkt_tlv2.c</in>
+        <in>eigrp_query.c</in>
+        <in>eigrp_reply.c</in>
+        <in>eigrp_routemap.c</in>
+        <in>eigrp_siaquery.c</in>
+        <in>eigrp_siareply.c</in>
+        <in>eigrp_snmp.c</in>
+        <in>eigrp_topology.c</in>
+        <in>eigrp_update.c</in>
+        <in>eigrp_vty.c</in>
+        <in>eigrp_zebra.c</in>
+        <in>eigrpd.c</in>
+      </df>
+      <df name="fpm">
+        <in>fpm_pb.c</in>
+      </df>
+      <df name="isisd">
+        <in>dict.c</in>
+        <in>isis_adjacency.c</in>
+        <in>isis_bpf.c</in>
+        <in>isis_circuit.c</in>
+        <in>isis_csm.c</in>
+        <in>isis_dlpi.c</in>
+        <in>isis_dr.c</in>
+        <in>isis_dynhn.c</in>
+        <in>isis_events.c</in>
+        <in>isis_flags.c</in>
+        <in>isis_lsp.c</in>
+        <in>isis_lsp_hash.c</in>
+        <in>isis_main.c</in>
+        <in>isis_memory.c</in>
+        <in>isis_misc.c</in>
+        <in>isis_mt.c</in>
+        <in>isis_pdu.c</in>
+        <in>isis_pfpacket.c</in>
+        <in>isis_redist.c</in>
+        <in>isis_route.c</in>
+        <in>isis_routemap.c</in>
+        <in>isis_spf.c</in>
+        <in>isis_te.c</in>
+        <in>isis_tlvs.c</in>
+        <in>isis_vty.c</in>
+        <in>isis_zebra.c</in>
+        <in>isisd.c</in>
+        <in>iso_checksum.c</in>
+      </df>
+      <df name="ldpd">
+        <in>accept.c</in>
+        <in>address.c</in>
+        <in>adjacency.c</in>
+        <in>control.c</in>
+        <in>hello.c</in>
+        <in>init.c</in>
+        <in>interface.c</in>
+        <in>keepalive.c</in>
+        <in>l2vpn.c</in>
+        <in>labelmapping.c</in>
+        <in>lde.c</in>
+        <in>lde_lib.c</in>
+        <in>ldp_debug.c</in>
+        <in>ldp_vty_cmds.c</in>
+        <in>ldp_vty_cmds_clippy.c</in>
+        <in>ldp_vty_conf.c</in>
+        <in>ldp_vty_exec.c</in>
+        <in>ldp_zebra.c</in>
+        <in>ldpd.c</in>
+        <in>ldpe.c</in>
+        <in>log.c</in>
+        <in>logmsg.c</in>
+        <in>neighbor.c</in>
+        <in>notification.c</in>
+        <in>packet.c</in>
+        <in>pfkey.c</in>
+        <in>socket.c</in>
+        <in>util.c</in>
+      </df>
+      <df name="lib">
+        <in>agentx.c</in>
+        <in>bfd.c</in>
+        <in>buffer.c</in>
+        <in>checksum.c</in>
+        <in>clippy.c</in>
+        <in>command.c</in>
+        <in>command_graph.c</in>
+        <in>command_lex.c</in>
+        <in>command_match.c</in>
+        <in>command_parse.c</in>
+        <in>command_py.c</in>
+        <in>csv.c</in>
+        <in>debug.c</in>
+        <in>defun_lex.c</in>
+        <in>distribute.c</in>
+        <in>event_counter.c</in>
+        <in>ferr.c</in>
+        <in>filter.c</in>
+        <in>frr_pthread.c</in>
+        <in>frr_zmq.c</in>
+        <in>frrstr.c</in>
+        <in>getopt.c</in>
+        <in>getopt1.c</in>
+        <in>grammar_sandbox.c</in>
+        <in>grammar_sandbox_main.c</in>
+        <in>graph.c</in>
+        <in>hash.c</in>
+        <in>hook.c</in>
+        <in>if.c</in>
+        <in>if_rmap.c</in>
+        <in>imsg-buffer.c</in>
+        <in>imsg.c</in>
+        <in>jhash.c</in>
+        <in>json.c</in>
+        <in>keychain.c</in>
+        <in>libfrr.c</in>
+        <in>linklist.c</in>
+        <in>log.c</in>
+        <in>logicalrouter.c</in>
+        <in>md5.c</in>
+        <in>memory.c</in>
+        <in>memory_vty.c</in>
+        <in>module.c</in>
+        <in>mpls.c</in>
+        <in>netns_linux.c</in>
+        <in>netns_other.c</in>
+        <in>network.c</in>
+        <in>nexthop.c</in>
+        <in>nexthop_group.c</in>
+        <in>nexthop_group_clippy.c</in>
+        <in>openbsd-tree.c</in>
+        <in>pid_output.c</in>
+        <in>plist.c</in>
+        <in>plist_clippy.c</in>
+        <in>pqueue.c</in>
+        <in>prefix.c</in>
+        <in>privs.c</in>
+        <in>ptm_lib.c</in>
+        <in>qobj.c</in>
+        <in>ringbuf.c</in>
+        <in>routemap.c</in>
+        <in>sbuf.c</in>
+        <in>sha256.c</in>
+        <in>sigevent.c</in>
+        <in>skiplist.c</in>
+        <in>smux.c</in>
+        <in>snmp.c</in>
+        <in>sockopt.c</in>
+        <in>sockunion.c</in>
+        <in>spf_backoff.c</in>
+        <in>srcdest_table.c</in>
+        <in>stream.c</in>
+        <in>strlcat.c</in>
+        <in>strlcpy.c</in>
+        <in>systemd.c</in>
+        <in>table.c</in>
+        <in>termtable.c</in>
+        <in>thread.c</in>
+        <in>vector.c</in>
+        <in>vrf.c</in>
+        <in>vty.c</in>
+        <in>wheel.c</in>
+        <in>workqueue.c</in>
+        <in>zclient.c</in>
+      </df>
+      <df name="nhrpd">
+        <in>linux.c</in>
+        <in>netlink_arp.c</in>
+        <in>netlink_gre.c</in>
+        <in>nhrp_cache.c</in>
+        <in>nhrp_event.c</in>
+        <in>nhrp_interface.c</in>
+        <in>nhrp_main.c</in>
+        <in>nhrp_nhs.c</in>
+        <in>nhrp_packet.c</in>
+        <in>nhrp_peer.c</in>
+        <in>nhrp_route.c</in>
+        <in>nhrp_shortcut.c</in>
+        <in>nhrp_vc.c</in>
+        <in>nhrp_vty.c</in>
+        <in>reqid.c</in>
+        <in>resolver.c</in>
+        <in>vici.c</in>
+        <in>zbuf.c</in>
+        <in>znl.c</in>
+      </df>
+      <df name="ospf6d">
+        <in>ospf6_abr.c</in>
+        <in>ospf6_area.c</in>
+        <in>ospf6_asbr.c</in>
+        <in>ospf6_bfd.c</in>
+        <in>ospf6_flood.c</in>
+        <in>ospf6_interface.c</in>
+        <in>ospf6_intra.c</in>
+        <in>ospf6_lsa.c</in>
+        <in>ospf6_lsdb.c</in>
+        <in>ospf6_main.c</in>
+        <in>ospf6_memory.c</in>
+        <in>ospf6_message.c</in>
+        <in>ospf6_neighbor.c</in>
+        <in>ospf6_network.c</in>
+        <in>ospf6_proto.c</in>
+        <in>ospf6_route.c</in>
+        <in>ospf6_snmp.c</in>
+        <in>ospf6_spf.c</in>
+        <in>ospf6_top.c</in>
+        <in>ospf6_zebra.c</in>
+        <in>ospf6d.c</in>
+      </df>
+      <df name="ospfclient">
+        <in>ospf_apiclient.c</in>
+        <in>ospfclient.c</in>
+      </df>
+      <df name="ospfd">
+        <in>ospf_abr.c</in>
+        <in>ospf_api.c</in>
+        <in>ospf_apiserver.c</in>
+        <in>ospf_asbr.c</in>
+        <in>ospf_ase.c</in>
+        <in>ospf_bfd.c</in>
+        <in>ospf_dump.c</in>
+        <in>ospf_dump_api.c</in>
+        <in>ospf_ext.c</in>
+        <in>ospf_flood.c</in>
+        <in>ospf_ia.c</in>
+        <in>ospf_interface.c</in>
+        <in>ospf_ism.c</in>
+        <in>ospf_lsa.c</in>
+        <in>ospf_lsdb.c</in>
+        <in>ospf_main.c</in>
+        <in>ospf_memory.c</in>
+        <in>ospf_neighbor.c</in>
+        <in>ospf_network.c</in>
+        <in>ospf_nsm.c</in>
+        <in>ospf_opaque.c</in>
+        <in>ospf_packet.c</in>
+        <in>ospf_ri.c</in>
+        <in>ospf_route.c</in>
+        <in>ospf_routemap.c</in>
+        <in>ospf_snmp.c</in>
+        <in>ospf_spf.c</in>
+        <in>ospf_sr.c</in>
+        <in>ospf_te.c</in>
+        <in>ospf_vty.c</in>
+        <in>ospf_vty_clippy.c</in>
+        <in>ospf_zebra.c</in>
+        <in>ospfd.c</in>
+      </df>
+      <df name="pbrd">
+        <in>pbr_debug.c</in>
+        <in>pbr_debug_clippy.c</in>
+        <in>pbr_main.c</in>
+        <in>pbr_map.c</in>
+        <in>pbr_memory.c</in>
+        <in>pbr_nht.c</in>
+        <in>pbr_vty.c</in>
+        <in>pbr_vty_clippy.c</in>
+        <in>pbr_zebra.c</in>
+      </df>
+      <df name="pimd">
+        <in>mtracebis.c</in>
+        <in>mtracebis_netlink.c</in>
+        <in>mtracebis_routeget.c</in>
+        <in>pim_assert.c</in>
+        <in>pim_bfd.c</in>
+        <in>pim_br.c</in>
+        <in>pim_cmd.c</in>
+        <in>pim_hello.c</in>
+        <in>pim_iface.c</in>
+        <in>pim_ifchannel.c</in>
+        <in>pim_igmp.c</in>
+        <in>pim_igmp_mtrace.c</in>
+        <in>pim_igmp_stats.c</in>
+        <in>pim_igmpv2.c</in>
+        <in>pim_igmpv3.c</in>
+        <in>pim_instance.c</in>
+        <in>pim_int.c</in>
+        <in>pim_join.c</in>
+        <in>pim_jp_agg.c</in>
+        <in>pim_macro.c</in>
+        <in>pim_main.c</in>
+        <in>pim_memory.c</in>
+        <in>pim_mroute.c</in>
+        <in>pim_msdp.c</in>
+        <in>pim_msdp_packet.c</in>
+        <in>pim_msdp_socket.c</in>
+        <in>pim_msg.c</in>
+        <in>pim_neighbor.c</in>
+        <in>pim_nht.c</in>
+        <in>pim_oil.c</in>
+        <in>pim_pim.c</in>
+        <in>pim_register.c</in>
+        <in>pim_routemap.c</in>
+        <in>pim_rp.c</in>
+        <in>pim_rpf.c</in>
+        <in>pim_signals.c</in>
+        <in>pim_sock.c</in>
+        <in>pim_ssm.c</in>
+        <in>pim_ssmpingd.c</in>
+        <in>pim_static.c</in>
+        <in>pim_str.c</in>
+        <in>pim_time.c</in>
+        <in>pim_tlv.c</in>
+        <in>pim_upstream.c</in>
+        <in>pim_util.c</in>
+        <in>pim_version.c</in>
+        <in>pim_vty.c</in>
+        <in>pim_zebra.c</in>
+        <in>pim_zlookup.c</in>
+        <in>pimd.c</in>
+        <in>test_igmpv3_join.c</in>
+      </df>
+      <df name="qpb">
+        <in>qpb.c</in>
+        <in>qpb_allocator.c</in>
+      </df>
+      <df name="ripd">
+        <in>rip_debug.c</in>
+        <in>rip_interface.c</in>
+        <in>rip_main.c</in>
+        <in>rip_memory.c</in>
+        <in>rip_offset.c</in>
+        <in>rip_peer.c</in>
+        <in>rip_routemap.c</in>
+        <in>rip_snmp.c</in>
+        <in>rip_zebra.c</in>
+        <in>ripd.c</in>
+      </df>
+      <df name="ripngd">
+        <in>ripng_debug.c</in>
+        <in>ripng_interface.c</in>
+        <in>ripng_main.c</in>
+        <in>ripng_memory.c</in>
+        <in>ripng_nexthop.c</in>
+        <in>ripng_offset.c</in>
+        <in>ripng_peer.c</in>
+        <in>ripng_route.c</in>
+        <in>ripng_routemap.c</in>
+        <in>ripng_zebra.c</in>
+        <in>ripngd.c</in>
+      </df>
+      <df name="sharpd">
+        <in>sharp_main.c</in>
+        <in>sharp_vty.c</in>
+        <in>sharp_zebra.c</in>
+      </df>
+      <df name="tests">
+        <df name="bgpd">
+          <in>test_aspath.c</in>
+          <in>test_capability.c</in>
+          <in>test_ecommunity.c</in>
+          <in>test_mp_attr.c</in>
+          <in>test_mpath.c</in>
+          <in>test_packet.c</in>
+          <in>test_peer_attr.c</in>
+        </df>
+        <df name="helpers">
+          <df name="c">
+            <in>main.c</in>
+            <in>prng.c</in>
+          </df>
+        </df>
+        <df name="isisd">
+          <in>test_fuzz_isis_tlv.c</in>
+          <in>test_isis_vertex_queue.c</in>
+        </df>
+        <df name="lib">
+          <df name="cli">
+            <in>common_cli.c</in>
+            <in>test_cli.c</in>
+            <in>test_commands.c</in>
+          </df>
+          <in>test_buffer.c</in>
+          <in>test_checksum.c</in>
+          <in>test_graph.c</in>
+          <in>test_heavy.c</in>
+          <in>test_heavy_thread.c</in>
+          <in>test_heavy_wq.c</in>
+          <in>test_memory.c</in>
+          <in>test_nexthop_iter.c</in>
+          <in>test_privs.c</in>
+          <in>test_ringbuf.c</in>
+          <in>test_segv.c</in>
+          <in>test_sig.c</in>
+          <in>test_srcdest_table.c</in>
+          <in>test_stream.c</in>
+          <in>test_table.c</in>
+          <in>test_timer_correctness.c</in>
+          <in>test_timer_performance.c</in>
+          <in>test_ttable.c</in>
+          <in>test_zlog.c</in>
+          <in>test_zmq.c</in>
+        </df>
+        <df name="ospf6d">
+          <in>test_lsdb.c</in>
+        </df>
+        <in>test_lblmgr.c</in>
+      </df>
+      <df name="tools">
+        <in>permutations.c</in>
+        <in>start-stop-daemon.c</in>
+      </df>
+      <df name="vtysh">
+        <in>vtysh.c</in>
+        <in>vtysh_cmd.c</in>
+        <in>vtysh_config.c</in>
+        <in>vtysh_main.c</in>
+        <in>vtysh_user.c</in>
+      </df>
+      <df name="watchfrr">
+        <in>watchfrr.c</in>
+        <in>watchfrr_vty.c</in>
+      </df>
+      <df name="zebra">
+        <in>client_main.c</in>
+        <in>connected.c</in>
+        <in>debug.c</in>
+        <in>if_ioctl.c</in>
+        <in>if_ioctl_solaris.c</in>
+        <in>if_netlink.c</in>
+        <in>if_sysctl.c</in>
+        <in>interface.c</in>
+        <in>ioctl.c</in>
+        <in>ioctl_solaris.c</in>
+        <in>ipforward_proc.c</in>
+        <in>ipforward_solaris.c</in>
+        <in>ipforward_sysctl.c</in>
+        <in>irdp_interface.c</in>
+        <in>irdp_main.c</in>
+        <in>irdp_packet.c</in>
+        <in>kernel_netlink.c</in>
+        <in>kernel_socket.c</in>
+        <in>label_manager.c</in>
+        <in>main.c</in>
+        <in>redistribute.c</in>
+        <in>router-id.c</in>
+        <in>rt_netlink.c</in>
+        <in>rt_socket.c</in>
+        <in>rtadv.c</in>
+        <in>rtread_getmsg.c</in>
+        <in>rtread_netlink.c</in>
+        <in>rtread_sysctl.c</in>
+        <in>rule_netlink.c</in>
+        <in>rule_socket.c</in>
+        <in>table_manager.c</in>
+        <in>temp.c</in>
+        <in>vpp.c</in>
+        <in>vpp.h</in>
+        <in>zapi_msg.c</in>
+        <in>zebra_fpm.c</in>
+        <in>zebra_fpm_dt.c</in>
+        <in>zebra_fpm_netlink.c</in>
+        <in>zebra_fpm_protobuf.c</in>
+        <in>zebra_l2.c</in>
+        <in>zebra_l2_null.c</in>
+        <in>zebra_memory.c</in>
+        <in>zebra_mpls.c</in>
+        <in>zebra_mpls_netlink.c</in>
+        <in>zebra_mpls_null.c</in>
+        <in>zebra_mpls_openbsd.c</in>
+        <in>zebra_mpls_vty.c</in>
+        <in>zebra_mroute.c</in>
+        <in>zebra_netns_id.c</in>
+        <in>zebra_netns_notify.c</in>
+        <in>zebra_ns.c</in>
+        <in>zebra_pbr.c</in>
+        <in>zebra_ptm.c</in>
+        <in>zebra_ptm_redistribute.c</in>
+        <in>zebra_pw.c</in>
+        <in>zebra_rib.c</in>
+        <in>zebra_rnh.c</in>
+        <in>zebra_routemap.c</in>
+        <in>zebra_snmp.c</in>
+        <in>zebra_static.c</in>
+        <in>zebra_vrf.c</in>
+        <in>zebra_vty.c</in>
+        <in>zebra_vty_clippy.c</in>
+        <in>zebra_vxlan.c</in>
+        <in>zebra_vxlan_null.c</in>
+        <in>zserv.c</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>configure</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+        <buildAnalyzer>false</buildAnalyzer>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir></buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="babeld/babel_filter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/babel_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/babel_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/babel_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/babel_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/babeld.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/kernel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/message.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/neighbour.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/net.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/resend.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/source.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="babeld/xroute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_advertise.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_aspath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_attr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_attr_evpn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_bfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_btoa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_clist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_community.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_damp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_dump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_ecommunity.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_encap_tlv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_evpn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_evpn_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_filter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_flowspec.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_flowspec_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_flowspec_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_fsm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_io.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_keepalives.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_label.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_labelpool.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_lcommunity.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_mpath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_mplsvpn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_network.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_nexthop.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_nht.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_open.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_pbr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_rd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_regex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_route_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_rpki.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_updgrp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_updgrp_adv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_updgrp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_vpn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_vty_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgp_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/bgpd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/newfile.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/bgp_rfapi_cfg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_ap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_descriptor_rfp_utils.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_encap_tlv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_import.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_monitor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_nve_addr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_rib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/rfapi_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/vnc_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/vnc_export_bgp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/vnc_export_table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/vnc_import_bgp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfapi/vnc_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bgpd/rfp-example/librfp/rfp_example.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="bgpd/rfp-example/rfptest/rfptest.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_dump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_filter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_fsm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_hello.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_neighbor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_network.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_pkt_tlv1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_pkt_tlv2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_query.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_reply.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_siaquery.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_siareply.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_topology.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_update.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrp_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="eigrpd/eigrpd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="fpm/fpm_pb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/dict.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_adjacency.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_bpf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_circuit.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_csm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_dlpi.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_dr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_dynhn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_events.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_flags.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_lsp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_lsp_hash.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_misc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_mt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_pdu.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_pfpacket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_redist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_spf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_te.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_tlvs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isis_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/isisd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="isisd/iso_checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/accept.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/address.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/adjacency.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/control.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/hello.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/init.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/keepalive.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/l2vpn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/labelmapping.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/lde.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/lde_lib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_vty_cmds.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_vty_cmds_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_vty_conf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_vty_exec.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldp_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldpd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/ldpe.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/log.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/logmsg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/neighbor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/notification.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/pfkey.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/socket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ldpd/util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/agentx.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/bfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/buffer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command_graph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command_lex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command_match.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command_parse.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/command_py.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/csv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/defun_lex.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/distribute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/event_counter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/ferr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/filter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/frr_pthread.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/frr_zmq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/frrstr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/getopt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/getopt1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/grammar_sandbox.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/grammar_sandbox_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/graph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/hash.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/hook.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/if.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/if_rmap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/imsg-buffer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/imsg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/jhash.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/json.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/keychain.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/libfrr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/linklist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/log.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/logicalrouter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/md5.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/memory_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/module.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/mpls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/netns_linux.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/netns_other.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/network.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/nexthop.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/nexthop_group.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/nexthop_group_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/openbsd-tree.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/pid_output.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/plist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/plist_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/pqueue.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/prefix.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/privs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/ptm_lib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/qobj.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/ringbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/sbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/sha256.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/sigevent.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/skiplist.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/smux.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/sockopt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/sockunion.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/spf_backoff.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/srcdest_table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/stream.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/strlcat.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/strlcpy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/systemd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/termtable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/thread.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/vector.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/vrf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/wheel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/workqueue.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="lib/zclient.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/linux.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/netlink_arp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/netlink_gre.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_cache.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_event.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_nhs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_peer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_shortcut.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_vc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/nhrp_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/reqid.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/resolver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/vici.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/zbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="nhrpd/znl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_abr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_area.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_asbr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_bfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_flood.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_intra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_lsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_lsdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_message.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_neighbor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_network.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_proto.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_spf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_top.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospf6d/ospf6d.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfclient/ospf_apiclient.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfclient/ospfclient.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_abr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_api.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_apiserver.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_asbr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_ase.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_bfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_dump.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_dump_api.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_ext.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_flood.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_ia.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_ism.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_lsa.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_lsdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_neighbor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_network.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_nsm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_opaque.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_ri.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_spf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_sr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_te.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_vty_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospf_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ospfd/ospfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_debug_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_map.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_nht.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_vty_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pbrd/pbr_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/mtracebis.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/mtracebis_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/mtracebis_routeget.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_assert.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_bfd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_br.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_cmd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_hello.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_iface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_ifchannel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_igmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_igmp_mtrace.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_igmp_stats.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_igmpv2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_igmpv3.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_instance.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_int.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_join.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_jp_agg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_macro.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_mroute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_msdp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_msdp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_msdp_socket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_msg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_neighbor.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_nht.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_oil.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_pim.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_register.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_rp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_rpf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_signals.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_sock.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_ssm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_ssmpingd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_static.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_str.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_time.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_tlv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_upstream.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_util.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_version.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pim_zlookup.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/pimd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="pimd/test_igmpv3_join.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="qpb/qpb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="qpb/qpb_allocator.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_offset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_peer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/rip_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripd/ripd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_nexthop.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_offset.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_peer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_route.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripng_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ripngd/ripngd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sharpd/sharp_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sharpd/sharp_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="sharpd/sharp_zebra.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_aspath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_capability.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_ecommunity.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_mp_attr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_mpath.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/bgpd/test_peer_attr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/helpers/c/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/helpers/c/prng.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/isisd/test_fuzz_isis_tlv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/isisd/test_isis_vertex_queue.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="tests/lib/cli/common_cli.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/cli/test_cli.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/cli/test_commands.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_buffer.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_checksum.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_graph.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_heavy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_heavy_thread.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_heavy_wq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_nexthop_iter.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_privs.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_ringbuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_segv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_sig.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_srcdest_table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_stream.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_table.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_timer_correctness.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_timer_performance.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_ttable.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_zlog.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/lib/test_zmq.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/ospf6d/test_lsdb.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/test_lblmgr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tools/permutations.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tools/start-stop-daemon.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vtysh/vtysh.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vtysh/vtysh_cmd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vtysh/vtysh_config.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vtysh/vtysh_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="vtysh/vtysh_user.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="watchfrr/watchfrr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="watchfrr/watchfrr_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/client_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/connected.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/debug.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/if_ioctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/if_ioctl_solaris.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/if_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/if_sysctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/ioctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/ioctl_solaris.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/ipforward_proc.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/ipforward_solaris.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/ipforward_sysctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/irdp_interface.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/irdp_main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/irdp_packet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/kernel_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/kernel_socket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/label_manager.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/redistribute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/router-id.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rt_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rt_socket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rtadv.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rtread_getmsg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rtread_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rtread_sysctl.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rule_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/rule_socket.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/table_manager.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/temp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/vpp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/vpp.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="zebra/zapi_msg.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_fpm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_fpm_dt.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_fpm_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_fpm_protobuf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_l2.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_l2_null.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_memory.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mpls.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mpls_netlink.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mpls_null.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mpls_openbsd.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mpls_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_mroute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_netns_id.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_netns_notify.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_ns.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_pbr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_ptm.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_ptm_redistribute.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_pw.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_rib.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_rnh.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_routemap.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_snmp.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_static.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_vrf.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_vty.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_vty_clippy.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_vxlan.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zebra_vxlan_null.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="zebra/zserv.c" ex="false" tool="0" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>

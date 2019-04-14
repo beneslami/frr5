@@ -1,0 +1,1290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="alpine">
+      </df>
+      <df name="autom4te.cache">
+      </df>
+      <df name="babeld">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>babel_filter.c</in>
+        <in>babel_filter.h</in>
+        <in>babel_interface.c</in>
+        <in>babel_interface.h</in>
+        <in>babel_main.c</in>
+        <in>babel_main.h</in>
+        <in>babel_memory.c</in>
+        <in>babel_memory.h</in>
+        <in>babel_zebra.c</in>
+        <in>babel_zebra.h</in>
+        <in>babeld.c</in>
+        <in>babeld.h</in>
+        <in>kernel.c</in>
+        <in>kernel.h</in>
+        <in>message.c</in>
+        <in>message.h</in>
+        <in>neighbour.c</in>
+        <in>neighbour.h</in>
+        <in>net.c</in>
+        <in>net.h</in>
+        <in>resend.c</in>
+        <in>resend.h</in>
+        <in>route.c</in>
+        <in>route.h</in>
+        <in>source.c</in>
+        <in>source.h</in>
+        <in>util.c</in>
+        <in>util.h</in>
+        <in>xroute.c</in>
+        <in>xroute.h</in>
+      </df>
+      <df name="bgpd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <df name="rfapi">
+          <df name=".deps">
+          </df>
+          <in>bgp_rfapi_cfg.c</in>
+          <in>bgp_rfapi_cfg.h</in>
+          <in>rfapi.c</in>
+          <in>rfapi.h</in>
+          <in>rfapi_ap.c</in>
+          <in>rfapi_ap.h</in>
+          <in>rfapi_backend.h</in>
+          <in>rfapi_descriptor_rfp_utils.c</in>
+          <in>rfapi_descriptor_rfp_utils.h</in>
+          <in>rfapi_encap_tlv.c</in>
+          <in>rfapi_encap_tlv.h</in>
+          <in>rfapi_import.c</in>
+          <in>rfapi_import.h</in>
+          <in>rfapi_monitor.c</in>
+          <in>rfapi_monitor.h</in>
+          <in>rfapi_nve_addr.c</in>
+          <in>rfapi_nve_addr.h</in>
+          <in>rfapi_private.h</in>
+          <in>rfapi_rib.c</in>
+          <in>rfapi_rib.h</in>
+          <in>rfapi_vty.c</in>
+          <in>rfapi_vty.h</in>
+          <in>vnc_debug.c</in>
+          <in>vnc_debug.h</in>
+          <in>vnc_export_bgp.c</in>
+          <in>vnc_export_bgp.h</in>
+          <in>vnc_export_bgp_p.h</in>
+          <in>vnc_export_table.c</in>
+          <in>vnc_export_table.h</in>
+          <in>vnc_import_bgp.c</in>
+          <in>vnc_import_bgp.h</in>
+          <in>vnc_import_bgp_p.h</in>
+          <in>vnc_zebra.c</in>
+          <in>vnc_zebra.h</in>
+        </df>
+        <df name="rfp-example">
+          <df name="librfp">
+            <df name=".deps">
+            </df>
+            <in>rfp.h</in>
+            <in>rfp_example.c</in>
+            <in>rfp_internal.h</in>
+          </df>
+          <df name="rfptest">
+            <df name=".deps">
+            </df>
+            <df name=".libs">
+            </df>
+            <in>rfptest.c</in>
+            <in>rfptest.h</in>
+          </df>
+        </df>
+        <in>bgp_advertise.c</in>
+        <in>bgp_advertise.h</in>
+        <in>bgp_aspath.c</in>
+        <in>bgp_aspath.h</in>
+        <in>bgp_attr.c</in>
+        <in>bgp_attr.h</in>
+        <in>bgp_attr_evpn.c</in>
+        <in>bgp_attr_evpn.h</in>
+        <in>bgp_bfd.c</in>
+        <in>bgp_bfd.h</in>
+        <in>bgp_btoa.c</in>
+        <in>bgp_clist.c</in>
+        <in>bgp_clist.h</in>
+        <in>bgp_community.c</in>
+        <in>bgp_community.h</in>
+        <in>bgp_damp.c</in>
+        <in>bgp_damp.h</in>
+        <in>bgp_debug.c</in>
+        <in>bgp_debug.h</in>
+        <in>bgp_dump.c</in>
+        <in>bgp_dump.h</in>
+        <in>bgp_ecommunity.c</in>
+        <in>bgp_ecommunity.h</in>
+        <in>bgp_encap_tlv.c</in>
+        <in>bgp_encap_tlv.h</in>
+        <in>bgp_encap_types.h</in>
+        <in>bgp_evpn.c</in>
+        <in>bgp_evpn.h</in>
+        <in>bgp_evpn_private.h</in>
+        <in>bgp_evpn_vty.c</in>
+        <in>bgp_evpn_vty.h</in>
+        <in>bgp_filter.c</in>
+        <in>bgp_filter.h</in>
+        <in>bgp_flowspec.c</in>
+        <in>bgp_flowspec.h</in>
+        <in>bgp_flowspec_private.h</in>
+        <in>bgp_flowspec_util.c</in>
+        <in>bgp_flowspec_util.h</in>
+        <in>bgp_flowspec_vty.c</in>
+        <in>bgp_fsm.c</in>
+        <in>bgp_fsm.h</in>
+        <in>bgp_io.c</in>
+        <in>bgp_io.h</in>
+        <in>bgp_keepalives.c</in>
+        <in>bgp_keepalives.h</in>
+        <in>bgp_label.c</in>
+        <in>bgp_label.h</in>
+        <in>bgp_labelpool.c</in>
+        <in>bgp_labelpool.h</in>
+        <in>bgp_lcommunity.c</in>
+        <in>bgp_lcommunity.h</in>
+        <in>bgp_main.c</in>
+        <in>bgp_memory.c</in>
+        <in>bgp_memory.h</in>
+        <in>bgp_mpath.c</in>
+        <in>bgp_mpath.h</in>
+        <in>bgp_mplsvpn.c</in>
+        <in>bgp_mplsvpn.h</in>
+        <in>bgp_network.c</in>
+        <in>bgp_network.h</in>
+        <in>bgp_nexthop.c</in>
+        <in>bgp_nexthop.h</in>
+        <in>bgp_nht.c</in>
+        <in>bgp_nht.h</in>
+        <in>bgp_open.c</in>
+        <in>bgp_open.h</in>
+        <in>bgp_packet.c</in>
+        <in>bgp_packet.h</in>
+        <in>bgp_pbr.c</in>
+        <in>bgp_pbr.h</in>
+        <in>bgp_rd.c</in>
+        <in>bgp_rd.h</in>
+        <in>bgp_regex.c</in>
+        <in>bgp_regex.h</in>
+        <in>bgp_route.c</in>
+        <in>bgp_route.h</in>
+        <in>bgp_route_clippy.c</in>
+        <in>bgp_routemap.c</in>
+        <in>bgp_rpki.c</in>
+        <in>bgp_snmp.c</in>
+        <in>bgp_table.c</in>
+        <in>bgp_table.h</in>
+        <in>bgp_updgrp.c</in>
+        <in>bgp_updgrp.h</in>
+        <in>bgp_updgrp_adv.c</in>
+        <in>bgp_updgrp_packet.c</in>
+        <in>bgp_vnc_types.h</in>
+        <in>bgp_vpn.c</in>
+        <in>bgp_vpn.h</in>
+        <in>bgp_vty.c</in>
+        <in>bgp_vty.h</in>
+        <in>bgp_vty_clippy.c</in>
+        <in>bgp_zebra.c</in>
+        <in>bgp_zebra.h</in>
+        <in>bgpd.c</in>
+        <in>bgpd.h</in>
+        <in>newfile.c</in>
+      </df>
+      <df name="debianpkg">
+        <df name="backports">
+          <df name="debian8">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="debian9">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="ubuntu12.04">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="ubuntu14.04">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="ubuntu16.04">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="ubuntu17.10">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+          <df name="ubuntu18.04">
+            <df name="debian">
+              <df name="source">
+              </df>
+            </df>
+          </df>
+        </df>
+        <df name="source">
+        </df>
+        <df name="tests">
+        </df>
+      </df>
+      <df name="doc">
+        <df name="developer">
+          <df name="_static">
+          </df>
+        </df>
+        <df name="extra">
+        </df>
+        <df name="figures">
+        </df>
+        <df name="manpages">
+          <df name="_build">
+            <df name="doctrees">
+            </df>
+            <df name="man">
+            </df>
+          </df>
+        </df>
+        <df name="mpls">
+        </df>
+        <df name="user">
+          <df name="_build">
+            <df name="doctrees">
+            </df>
+            <df name="texinfo">
+            </df>
+          </df>
+          <df name="_static">
+          </df>
+        </df>
+      </df>
+      <df name="docker">
+        <df name="alpine">
+        </df>
+      </df>
+      <df name="eigrpd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>eigrp_const.h</in>
+        <in>eigrp_dump.c</in>
+        <in>eigrp_dump.h</in>
+        <in>eigrp_filter.c</in>
+        <in>eigrp_filter.h</in>
+        <in>eigrp_fsm.c</in>
+        <in>eigrp_fsm.h</in>
+        <in>eigrp_hello.c</in>
+        <in>eigrp_interface.c</in>
+        <in>eigrp_interface.h</in>
+        <in>eigrp_macros.h</in>
+        <in>eigrp_main.c</in>
+        <in>eigrp_memory.c</in>
+        <in>eigrp_memory.h</in>
+        <in>eigrp_neighbor.c</in>
+        <in>eigrp_neighbor.h</in>
+        <in>eigrp_network.c</in>
+        <in>eigrp_network.h</in>
+        <in>eigrp_packet.c</in>
+        <in>eigrp_packet.h</in>
+        <in>eigrp_pkt_tlv1.c</in>
+        <in>eigrp_pkt_tlv2.c</in>
+        <in>eigrp_query.c</in>
+        <in>eigrp_reply.c</in>
+        <in>eigrp_routemap.c</in>
+        <in>eigrp_routemap.h</in>
+        <in>eigrp_siaquery.c</in>
+        <in>eigrp_siareply.c</in>
+        <in>eigrp_snmp.c</in>
+        <in>eigrp_snmp.h</in>
+        <in>eigrp_structs.h</in>
+        <in>eigrp_topology.c</in>
+        <in>eigrp_topology.h</in>
+        <in>eigrp_update.c</in>
+        <in>eigrp_vty.c</in>
+        <in>eigrp_vty.h</in>
+        <in>eigrp_zebra.c</in>
+        <in>eigrp_zebra.h</in>
+        <in>eigrpd.c</in>
+        <in>eigrpd.h</in>
+      </df>
+      <df name="fpm">
+        <df name=".deps">
+        </df>
+        <in>fpm.h</in>
+        <in>fpm_pb.c</in>
+        <in>fpm_pb.h</in>
+      </df>
+      <df name="gdb">
+      </df>
+      <df name="include">
+        <df name="linux">
+          <in>fib_rules.h</in>
+          <in>if_bridge.h</in>
+          <in>if_link.h</in>
+          <in>lwtunnel.h</in>
+          <in>mpls_iptunnel.h</in>
+          <in>neighbour.h</in>
+          <in>net_namespace.h</in>
+          <in>netlink.h</in>
+          <in>rtnetlink.h</in>
+          <in>socket.h</in>
+        </df>
+      </df>
+      <df name="init">
+      </df>
+      <df name="isisd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>dict.c</in>
+        <in>dict.h</in>
+        <in>isis_adjacency.c</in>
+        <in>isis_adjacency.h</in>
+        <in>isis_bpf.c</in>
+        <in>isis_circuit.c</in>
+        <in>isis_circuit.h</in>
+        <in>isis_common.h</in>
+        <in>isis_constants.h</in>
+        <in>isis_csm.c</in>
+        <in>isis_csm.h</in>
+        <in>isis_dlpi.c</in>
+        <in>isis_dr.c</in>
+        <in>isis_dr.h</in>
+        <in>isis_dynhn.c</in>
+        <in>isis_dynhn.h</in>
+        <in>isis_events.c</in>
+        <in>isis_events.h</in>
+        <in>isis_flags.c</in>
+        <in>isis_flags.h</in>
+        <in>isis_lsp.c</in>
+        <in>isis_lsp.h</in>
+        <in>isis_lsp_hash.c</in>
+        <in>isis_lsp_hash.h</in>
+        <in>isis_main.c</in>
+        <in>isis_memory.c</in>
+        <in>isis_memory.h</in>
+        <in>isis_misc.c</in>
+        <in>isis_misc.h</in>
+        <in>isis_mt.c</in>
+        <in>isis_mt.h</in>
+        <in>isis_network.h</in>
+        <in>isis_pdu.c</in>
+        <in>isis_pdu.h</in>
+        <in>isis_pfpacket.c</in>
+        <in>isis_redist.c</in>
+        <in>isis_redist.h</in>
+        <in>isis_route.c</in>
+        <in>isis_route.h</in>
+        <in>isis_routemap.c</in>
+        <in>isis_routemap.h</in>
+        <in>isis_spf.c</in>
+        <in>isis_spf.h</in>
+        <in>isis_te.c</in>
+        <in>isis_te.h</in>
+        <in>isis_tlvs.c</in>
+        <in>isis_tlvs.h</in>
+        <in>isis_vty.c</in>
+        <in>isis_zebra.c</in>
+        <in>isis_zebra.h</in>
+        <in>isisd.c</in>
+        <in>isisd.h</in>
+        <in>iso_checksum.c</in>
+        <in>iso_checksum.h</in>
+      </df>
+      <df name="ldpd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>accept.c</in>
+        <in>address.c</in>
+        <in>adjacency.c</in>
+        <in>control.c</in>
+        <in>control.h</in>
+        <in>hello.c</in>
+        <in>init.c</in>
+        <in>interface.c</in>
+        <in>keepalive.c</in>
+        <in>l2vpn.c</in>
+        <in>labelmapping.c</in>
+        <in>lde.c</in>
+        <in>lde.h</in>
+        <in>lde_lib.c</in>
+        <in>ldp.h</in>
+        <in>ldp_debug.c</in>
+        <in>ldp_debug.h</in>
+        <in>ldp_vty.h</in>
+        <in>ldp_vty_cmds.c</in>
+        <in>ldp_vty_cmds_clippy.c</in>
+        <in>ldp_vty_conf.c</in>
+        <in>ldp_vty_exec.c</in>
+        <in>ldp_zebra.c</in>
+        <in>ldpd.c</in>
+        <in>ldpd.h</in>
+        <in>ldpe.c</in>
+        <in>ldpe.h</in>
+        <in>log.c</in>
+        <in>log.h</in>
+        <in>logmsg.c</in>
+        <in>neighbor.c</in>
+        <in>notification.c</in>
+        <in>packet.c</in>
+        <in>pfkey.c</in>
+        <in>socket.c</in>
+        <in>util.c</in>
+      </df>
+      <df name="lib">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>agentx.c</in>
+        <in>bfd.c</in>
+        <in>bfd.h</in>
+        <in>bitfield.h</in>
+        <in>buffer.c</in>
+        <in>buffer.h</in>
+        <in>checksum.c</in>
+        <in>checksum.h</in>
+        <in>clippy.c</in>
+        <in>clippy.h</in>
+        <in>command.c</in>
+        <in>command.h</in>
+        <in>command_graph.c</in>
+        <in>command_graph.h</in>
+        <in>command_lex.c</in>
+        <in>command_lex.h</in>
+        <in>command_match.c</in>
+        <in>command_match.h</in>
+        <in>command_parse.c</in>
+        <in>command_parse.h</in>
+        <in>command_py.c</in>
+        <in>compiler.h</in>
+        <in>csv.c</in>
+        <in>csv.h</in>
+        <in>debug.c</in>
+        <in>debug.h</in>
+        <in>defun_lex.c</in>
+        <in>distribute.c</in>
+        <in>distribute.h</in>
+        <in>event_counter.c</in>
+        <in>event_counter.h</in>
+        <in>ferr.c</in>
+        <in>ferr.h</in>
+        <in>fifo.h</in>
+        <in>filter.c</in>
+        <in>filter.h</in>
+        <in>freebsd-queue.h</in>
+        <in>frr_pthread.c</in>
+        <in>frr_pthread.h</in>
+        <in>frr_zmq.c</in>
+        <in>frr_zmq.h</in>
+        <in>frratomic.h</in>
+        <in>frrstr.c</in>
+        <in>frrstr.h</in>
+        <in>getopt.c</in>
+        <in>getopt.h</in>
+        <in>getopt1.c</in>
+        <in>grammar_sandbox.c</in>
+        <in>grammar_sandbox_main.c</in>
+        <in>graph.c</in>
+        <in>graph.h</in>
+        <in>hash.c</in>
+        <in>hash.h</in>
+        <in>hook.c</in>
+        <in>hook.h</in>
+        <in>if.c</in>
+        <in>if.h</in>
+        <in>if_rmap.c</in>
+        <in>if_rmap.h</in>
+        <in>imsg-buffer.c</in>
+        <in>imsg.c</in>
+        <in>imsg.h</in>
+        <in>ipaddr.h</in>
+        <in>jhash.c</in>
+        <in>jhash.h</in>
+        <in>json.c</in>
+        <in>json.h</in>
+        <in>keychain.c</in>
+        <in>keychain.h</in>
+        <in>libfrr.c</in>
+        <in>libfrr.h</in>
+        <in>libospf.h</in>
+        <in>linklist.c</in>
+        <in>linklist.h</in>
+        <in>log.c</in>
+        <in>log.h</in>
+        <in>log_int.h</in>
+        <in>logicalrouter.c</in>
+        <in>logicalrouter.h</in>
+        <in>md5.c</in>
+        <in>md5.h</in>
+        <in>memory.c</in>
+        <in>memory.h</in>
+        <in>memory_vty.c</in>
+        <in>memory_vty.h</in>
+        <in>module.c</in>
+        <in>module.h</in>
+        <in>monotime.h</in>
+        <in>mpls.c</in>
+        <in>mpls.h</in>
+        <in>netns_linux.c</in>
+        <in>netns_other.c</in>
+        <in>network.c</in>
+        <in>network.h</in>
+        <in>nexthop.c</in>
+        <in>nexthop.h</in>
+        <in>nexthop_group.c</in>
+        <in>nexthop_group.h</in>
+        <in>nexthop_group_clippy.c</in>
+        <in>ns.h</in>
+        <in>openbsd-queue.h</in>
+        <in>openbsd-tree.c</in>
+        <in>openbsd-tree.h</in>
+        <in>pbr.h</in>
+        <in>pid_output.c</in>
+        <in>plist.c</in>
+        <in>plist.h</in>
+        <in>plist_clippy.c</in>
+        <in>plist_int.h</in>
+        <in>pqueue.c</in>
+        <in>pqueue.h</in>
+        <in>prefix.c</in>
+        <in>prefix.h</in>
+        <in>privs.c</in>
+        <in>privs.h</in>
+        <in>ptm_lib.c</in>
+        <in>ptm_lib.h</in>
+        <in>pw.h</in>
+        <in>qobj.c</in>
+        <in>qobj.h</in>
+        <in>queue.h</in>
+        <in>ringbuf.c</in>
+        <in>ringbuf.h</in>
+        <in>route_types.h</in>
+        <in>routemap.c</in>
+        <in>routemap.h</in>
+        <in>sbuf.c</in>
+        <in>sbuf.h</in>
+        <in>sha256.c</in>
+        <in>sha256.h</in>
+        <in>sigevent.c</in>
+        <in>sigevent.h</in>
+        <in>skiplist.c</in>
+        <in>skiplist.h</in>
+        <in>smux.c</in>
+        <in>smux.h</in>
+        <in>snmp.c</in>
+        <in>sockopt.c</in>
+        <in>sockopt.h</in>
+        <in>sockunion.c</in>
+        <in>sockunion.h</in>
+        <in>spf_backoff.c</in>
+        <in>spf_backoff.h</in>
+        <in>srcdest_table.c</in>
+        <in>srcdest_table.h</in>
+        <in>stream.c</in>
+        <in>stream.h</in>
+        <in>strlcat.c</in>
+        <in>strlcpy.c</in>
+        <in>systemd.c</in>
+        <in>systemd.h</in>
+        <in>table.c</in>
+        <in>table.h</in>
+        <in>termtable.c</in>
+        <in>termtable.h</in>
+        <in>thread.c</in>
+        <in>thread.h</in>
+        <in>vector.c</in>
+        <in>vector.h</in>
+        <in>version.h</in>
+        <in>vlan.h</in>
+        <in>vrf.c</in>
+        <in>vrf.h</in>
+        <in>vrf_int.h</in>
+        <in>vty.c</in>
+        <in>vty.h</in>
+        <in>vxlan.h</in>
+        <in>wheel.c</in>
+        <in>wheel.h</in>
+        <in>workqueue.c</in>
+        <in>workqueue.h</in>
+        <in>zassert.h</in>
+        <in>zclient.c</in>
+        <in>zclient.h</in>
+        <in>zebra.h</in>
+      </df>
+      <df name="m4">
+      </df>
+      <df name="nhrpd">
+        <df name=".deps">
+        </df>
+        <in>debug.h</in>
+        <in>linux.c</in>
+        <in>list.h</in>
+        <in>netlink.h</in>
+        <in>netlink_arp.c</in>
+        <in>netlink_gre.c</in>
+        <in>nhrp_cache.c</in>
+        <in>nhrp_event.c</in>
+        <in>nhrp_interface.c</in>
+        <in>nhrp_main.c</in>
+        <in>nhrp_nhs.c</in>
+        <in>nhrp_packet.c</in>
+        <in>nhrp_peer.c</in>
+        <in>nhrp_protocol.h</in>
+        <in>nhrp_route.c</in>
+        <in>nhrp_shortcut.c</in>
+        <in>nhrp_vc.c</in>
+        <in>nhrp_vty.c</in>
+        <in>nhrpd.h</in>
+        <in>os.h</in>
+        <in>reqid.c</in>
+        <in>resolver.c</in>
+        <in>vici.c</in>
+        <in>vici.h</in>
+        <in>zbuf.c</in>
+        <in>zbuf.h</in>
+        <in>znl.c</in>
+        <in>znl.h</in>
+      </df>
+      <df name="ospf6d">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>ospf6_abr.c</in>
+        <in>ospf6_abr.h</in>
+        <in>ospf6_area.c</in>
+        <in>ospf6_area.h</in>
+        <in>ospf6_asbr.c</in>
+        <in>ospf6_asbr.h</in>
+        <in>ospf6_bfd.c</in>
+        <in>ospf6_bfd.h</in>
+        <in>ospf6_flood.c</in>
+        <in>ospf6_flood.h</in>
+        <in>ospf6_interface.c</in>
+        <in>ospf6_interface.h</in>
+        <in>ospf6_intra.c</in>
+        <in>ospf6_intra.h</in>
+        <in>ospf6_lsa.c</in>
+        <in>ospf6_lsa.h</in>
+        <in>ospf6_lsdb.c</in>
+        <in>ospf6_lsdb.h</in>
+        <in>ospf6_main.c</in>
+        <in>ospf6_memory.c</in>
+        <in>ospf6_memory.h</in>
+        <in>ospf6_message.c</in>
+        <in>ospf6_message.h</in>
+        <in>ospf6_neighbor.c</in>
+        <in>ospf6_neighbor.h</in>
+        <in>ospf6_network.c</in>
+        <in>ospf6_network.h</in>
+        <in>ospf6_proto.c</in>
+        <in>ospf6_proto.h</in>
+        <in>ospf6_route.c</in>
+        <in>ospf6_route.h</in>
+        <in>ospf6_snmp.c</in>
+        <in>ospf6_spf.c</in>
+        <in>ospf6_spf.h</in>
+        <in>ospf6_top.c</in>
+        <in>ospf6_top.h</in>
+        <in>ospf6_zebra.c</in>
+        <in>ospf6_zebra.h</in>
+        <in>ospf6d.c</in>
+        <in>ospf6d.h</in>
+      </df>
+      <df name="ospfclient">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>ospf_apiclient.c</in>
+        <in>ospf_apiclient.h</in>
+        <in>ospfclient.c</in>
+      </df>
+      <df name="ospfd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>ospf_abr.c</in>
+        <in>ospf_abr.h</in>
+        <in>ospf_api.c</in>
+        <in>ospf_api.h</in>
+        <in>ospf_apiserver.c</in>
+        <in>ospf_apiserver.h</in>
+        <in>ospf_asbr.c</in>
+        <in>ospf_asbr.h</in>
+        <in>ospf_ase.c</in>
+        <in>ospf_ase.h</in>
+        <in>ospf_bfd.c</in>
+        <in>ospf_bfd.h</in>
+        <in>ospf_dump.c</in>
+        <in>ospf_dump.h</in>
+        <in>ospf_dump_api.c</in>
+        <in>ospf_dump_api.h</in>
+        <in>ospf_ext.c</in>
+        <in>ospf_ext.h</in>
+        <in>ospf_flood.c</in>
+        <in>ospf_flood.h</in>
+        <in>ospf_ia.c</in>
+        <in>ospf_ia.h</in>
+        <in>ospf_interface.c</in>
+        <in>ospf_interface.h</in>
+        <in>ospf_ism.c</in>
+        <in>ospf_ism.h</in>
+        <in>ospf_lsa.c</in>
+        <in>ospf_lsa.h</in>
+        <in>ospf_lsdb.c</in>
+        <in>ospf_lsdb.h</in>
+        <in>ospf_main.c</in>
+        <in>ospf_memory.c</in>
+        <in>ospf_memory.h</in>
+        <in>ospf_neighbor.c</in>
+        <in>ospf_neighbor.h</in>
+        <in>ospf_network.c</in>
+        <in>ospf_network.h</in>
+        <in>ospf_nsm.c</in>
+        <in>ospf_nsm.h</in>
+        <in>ospf_opaque.c</in>
+        <in>ospf_opaque.h</in>
+        <in>ospf_packet.c</in>
+        <in>ospf_packet.h</in>
+        <in>ospf_ri.c</in>
+        <in>ospf_ri.h</in>
+        <in>ospf_route.c</in>
+        <in>ospf_route.h</in>
+        <in>ospf_routemap.c</in>
+        <in>ospf_snmp.c</in>
+        <in>ospf_spf.c</in>
+        <in>ospf_spf.h</in>
+        <in>ospf_sr.c</in>
+        <in>ospf_sr.h</in>
+        <in>ospf_te.c</in>
+        <in>ospf_te.h</in>
+        <in>ospf_vty.c</in>
+        <in>ospf_vty.h</in>
+        <in>ospf_vty_clippy.c</in>
+        <in>ospf_zebra.c</in>
+        <in>ospf_zebra.h</in>
+        <in>ospfd.c</in>
+        <in>ospfd.h</in>
+      </df>
+      <df name="pbrd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>pbr_debug.c</in>
+        <in>pbr_debug.h</in>
+        <in>pbr_debug_clippy.c</in>
+        <in>pbr_main.c</in>
+        <in>pbr_map.c</in>
+        <in>pbr_map.h</in>
+        <in>pbr_memory.c</in>
+        <in>pbr_memory.h</in>
+        <in>pbr_nht.c</in>
+        <in>pbr_nht.h</in>
+        <in>pbr_vty.c</in>
+        <in>pbr_vty.h</in>
+        <in>pbr_vty_clippy.c</in>
+        <in>pbr_zebra.c</in>
+        <in>pbr_zebra.h</in>
+      </df>
+      <df name="pimd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>mtracebis.c</in>
+        <in>mtracebis_netlink.c</in>
+        <in>mtracebis_netlink.h</in>
+        <in>mtracebis_routeget.c</in>
+        <in>mtracebis_routeget.h</in>
+        <in>pim_assert.c</in>
+        <in>pim_assert.h</in>
+        <in>pim_bfd.c</in>
+        <in>pim_bfd.h</in>
+        <in>pim_br.c</in>
+        <in>pim_br.h</in>
+        <in>pim_cmd.c</in>
+        <in>pim_cmd.h</in>
+        <in>pim_hello.c</in>
+        <in>pim_hello.h</in>
+        <in>pim_iface.c</in>
+        <in>pim_iface.h</in>
+        <in>pim_ifchannel.c</in>
+        <in>pim_ifchannel.h</in>
+        <in>pim_igmp.c</in>
+        <in>pim_igmp.h</in>
+        <in>pim_igmp_join.h</in>
+        <in>pim_igmp_mtrace.c</in>
+        <in>pim_igmp_mtrace.h</in>
+        <in>pim_igmp_stats.c</in>
+        <in>pim_igmp_stats.h</in>
+        <in>pim_igmpv2.c</in>
+        <in>pim_igmpv2.h</in>
+        <in>pim_igmpv3.c</in>
+        <in>pim_igmpv3.h</in>
+        <in>pim_instance.c</in>
+        <in>pim_instance.h</in>
+        <in>pim_int.c</in>
+        <in>pim_int.h</in>
+        <in>pim_join.c</in>
+        <in>pim_join.h</in>
+        <in>pim_jp_agg.c</in>
+        <in>pim_jp_agg.h</in>
+        <in>pim_macro.c</in>
+        <in>pim_macro.h</in>
+        <in>pim_main.c</in>
+        <in>pim_memory.c</in>
+        <in>pim_memory.h</in>
+        <in>pim_mroute.c</in>
+        <in>pim_mroute.h</in>
+        <in>pim_msdp.c</in>
+        <in>pim_msdp.h</in>
+        <in>pim_msdp_packet.c</in>
+        <in>pim_msdp_packet.h</in>
+        <in>pim_msdp_socket.c</in>
+        <in>pim_msdp_socket.h</in>
+        <in>pim_msg.c</in>
+        <in>pim_msg.h</in>
+        <in>pim_neighbor.c</in>
+        <in>pim_neighbor.h</in>
+        <in>pim_nht.c</in>
+        <in>pim_nht.h</in>
+        <in>pim_oil.c</in>
+        <in>pim_oil.h</in>
+        <in>pim_pim.c</in>
+        <in>pim_pim.h</in>
+        <in>pim_register.c</in>
+        <in>pim_register.h</in>
+        <in>pim_routemap.c</in>
+        <in>pim_rp.c</in>
+        <in>pim_rp.h</in>
+        <in>pim_rpf.c</in>
+        <in>pim_rpf.h</in>
+        <in>pim_signals.c</in>
+        <in>pim_signals.h</in>
+        <in>pim_sock.c</in>
+        <in>pim_sock.h</in>
+        <in>pim_ssm.c</in>
+        <in>pim_ssm.h</in>
+        <in>pim_ssmpingd.c</in>
+        <in>pim_ssmpingd.h</in>
+        <in>pim_static.c</in>
+        <in>pim_static.h</in>
+        <in>pim_str.c</in>
+        <in>pim_str.h</in>
+        <in>pim_time.c</in>
+        <in>pim_time.h</in>
+        <in>pim_tlv.c</in>
+        <in>pim_tlv.h</in>
+        <in>pim_upstream.c</in>
+        <in>pim_upstream.h</in>
+        <in>pim_util.c</in>
+        <in>pim_util.h</in>
+        <in>pim_version.c</in>
+        <in>pim_version.h</in>
+        <in>pim_vty.c</in>
+        <in>pim_vty.h</in>
+        <in>pim_zebra.c</in>
+        <in>pim_zebra.h</in>
+        <in>pim_zlookup.c</in>
+        <in>pim_zlookup.h</in>
+        <in>pimd.c</in>
+        <in>pimd.h</in>
+        <in>test_igmpv3_join.c</in>
+      </df>
+      <df name="pkgsrc">
+      </df>
+      <df name="ports">
+        <df name="files">
+        </df>
+        <df name="pkg">
+        </df>
+      </df>
+      <df name="python">
+        <df name="clippy">
+          <df name="__pycache__">
+          </df>
+        </df>
+      </df>
+      <df name="qpb">
+        <df name=".deps">
+        </df>
+        <in>linear_allocator.h</in>
+        <in>qpb.c</in>
+        <in>qpb.h</in>
+        <in>qpb_allocator.c</in>
+        <in>qpb_allocator.h</in>
+      </df>
+      <df name="redhat">
+      </df>
+      <df name="ripd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>rip_debug.c</in>
+        <in>rip_debug.h</in>
+        <in>rip_interface.c</in>
+        <in>rip_interface.h</in>
+        <in>rip_main.c</in>
+        <in>rip_memory.c</in>
+        <in>rip_memory.h</in>
+        <in>rip_offset.c</in>
+        <in>rip_peer.c</in>
+        <in>rip_routemap.c</in>
+        <in>rip_snmp.c</in>
+        <in>rip_zebra.c</in>
+        <in>ripd.c</in>
+        <in>ripd.h</in>
+      </df>
+      <df name="ripngd">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>ripng_debug.c</in>
+        <in>ripng_debug.h</in>
+        <in>ripng_interface.c</in>
+        <in>ripng_main.c</in>
+        <in>ripng_memory.c</in>
+        <in>ripng_memory.h</in>
+        <in>ripng_nexthop.c</in>
+        <in>ripng_nexthop.h</in>
+        <in>ripng_offset.c</in>
+        <in>ripng_peer.c</in>
+        <in>ripng_route.c</in>
+        <in>ripng_route.h</in>
+        <in>ripng_routemap.c</in>
+        <in>ripng_zebra.c</in>
+        <in>ripngd.c</in>
+        <in>ripngd.h</in>
+      </df>
+      <df name="sharpd">
+        <df name=".deps">
+        </df>
+        <in>sharp_main.c</in>
+        <in>sharp_vty.c</in>
+        <in>sharp_vty.h</in>
+        <in>sharp_zebra.c</in>
+        <in>sharp_zebra.h</in>
+      </df>
+      <df name="snapcraft">
+        <df name="defaults">
+        </df>
+        <df name="helpers">
+        </df>
+        <df name="scripts">
+        </df>
+        <df name="snap">
+          <df name="gui">
+          </df>
+        </df>
+      </df>
+      <df name="solaris">
+      </df>
+      <df name="tests">
+        <df name="bgpd">
+          <df name=".deps">
+          </df>
+          <in>test_aspath.c</in>
+          <in>test_capability.c</in>
+          <in>test_ecommunity.c</in>
+          <in>test_mp_attr.c</in>
+          <in>test_mpath.c</in>
+          <in>test_packet.c</in>
+          <in>test_peer_attr.c</in>
+        </df>
+        <df name="helpers">
+          <df name="c">
+            <df name=".deps">
+            </df>
+            <in>main.c</in>
+            <in>prng.c</in>
+            <in>prng.h</in>
+            <in>tests.h</in>
+          </df>
+          <df name="python">
+          </df>
+        </df>
+        <df name="isisd">
+          <df name=".deps">
+          </df>
+          <in>test_fuzz_isis_tlv.c</in>
+          <in>test_fuzz_isis_tlv_tests.h</in>
+          <in>test_isis_vertex_queue.c</in>
+        </df>
+        <df name="lib">
+          <df name=".deps">
+          </df>
+          <df name="cli">
+            <df name=".deps">
+            </df>
+            <in>common_cli.c</in>
+            <in>common_cli.h</in>
+            <in>test_cli.c</in>
+            <in>test_commands.c</in>
+          </df>
+          <in>test_buffer.c</in>
+          <in>test_checksum.c</in>
+          <in>test_graph.c</in>
+          <in>test_heavy.c</in>
+          <in>test_heavy_thread.c</in>
+          <in>test_heavy_wq.c</in>
+          <in>test_memory.c</in>
+          <in>test_nexthop_iter.c</in>
+          <in>test_privs.c</in>
+          <in>test_ringbuf.c</in>
+          <in>test_segv.c</in>
+          <in>test_sig.c</in>
+          <in>test_srcdest_table.c</in>
+          <in>test_stream.c</in>
+          <in>test_table.c</in>
+          <in>test_timer_correctness.c</in>
+          <in>test_timer_performance.c</in>
+          <in>test_ttable.c</in>
+          <in>test_zlog.c</in>
+          <in>test_zmq.c</in>
+        </df>
+        <df name="ospf6d">
+          <df name=".deps">
+          </df>
+          <in>test_lsdb.c</in>
+        </df>
+        <in>test_lblmgr.c</in>
+      </df>
+      <df name="tools">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <df name="etc">
+          <df name="default">
+          </df>
+          <df name="frr">
+          </df>
+          <df name="iproute2">
+            <df name="rt_protos.d">
+            </df>
+          </df>
+          <df name="rsyslog.d">
+          </df>
+        </df>
+        <in>cocci.h</in>
+        <in>permutations.c</in>
+        <in>start-stop-daemon.c</in>
+      </df>
+      <df name="vtysh">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>vtysh.c</in>
+        <in>vtysh.h</in>
+        <in>vtysh_cmd.c</in>
+        <in>vtysh_config.c</in>
+        <in>vtysh_main.c</in>
+        <in>vtysh_user.c</in>
+        <in>vtysh_user.h</in>
+      </df>
+      <df name="watchfrr">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>watchfrr.c</in>
+        <in>watchfrr.h</in>
+        <in>watchfrr_vty.c</in>
+      </df>
+      <df name="zebra">
+        <df name=".deps">
+        </df>
+        <df name=".libs">
+        </df>
+        <in>client_main.c</in>
+        <in>connected.c</in>
+        <in>connected.h</in>
+        <in>debug.c</in>
+        <in>debug.h</in>
+        <in>if_ioctl.c</in>
+        <in>if_ioctl_solaris.c</in>
+        <in>if_netlink.c</in>
+        <in>if_netlink.h</in>
+        <in>if_sysctl.c</in>
+        <in>interface.c</in>
+        <in>interface.h</in>
+        <in>ioctl.c</in>
+        <in>ioctl.h</in>
+        <in>ioctl_solaris.c</in>
+        <in>ioctl_solaris.h</in>
+        <in>ipforward.h</in>
+        <in>ipforward_proc.c</in>
+        <in>ipforward_solaris.c</in>
+        <in>ipforward_sysctl.c</in>
+        <in>irdp.h</in>
+        <in>irdp_interface.c</in>
+        <in>irdp_main.c</in>
+        <in>irdp_packet.c</in>
+        <in>kernel_netlink.c</in>
+        <in>kernel_netlink.h</in>
+        <in>kernel_socket.c</in>
+        <in>kernel_socket.h</in>
+        <in>label_manager.c</in>
+        <in>label_manager.h</in>
+        <in>main.c</in>
+        <in>redistribute.c</in>
+        <in>redistribute.h</in>
+        <in>rib.h</in>
+        <in>router-id.c</in>
+        <in>router-id.h</in>
+        <in>rt.h</in>
+        <in>rt_netlink.c</in>
+        <in>rt_netlink.h</in>
+        <in>rt_socket.c</in>
+        <in>rtadv.c</in>
+        <in>rtadv.h</in>
+        <in>rtread_getmsg.c</in>
+        <in>rtread_netlink.c</in>
+        <in>rtread_sysctl.c</in>
+        <in>rule_netlink.c</in>
+        <in>rule_netlink.h</in>
+        <in>rule_socket.c</in>
+        <in>table_manager.c</in>
+        <in>table_manager.h</in>
+        <in>temp.c</in>
+        <in>vpp.c</in>
+        <in>vpp.h</in>
+        <in>zapi_msg.c</in>
+        <in>zapi_msg.h</in>
+        <in>zebra_fpm.c</in>
+        <in>zebra_fpm_dt.c</in>
+        <in>zebra_fpm_netlink.c</in>
+        <in>zebra_fpm_private.h</in>
+        <in>zebra_fpm_protobuf.c</in>
+        <in>zebra_l2.c</in>
+        <in>zebra_l2.h</in>
+        <in>zebra_l2_null.c</in>
+        <in>zebra_memory.c</in>
+        <in>zebra_memory.h</in>
+        <in>zebra_mpls.c</in>
+        <in>zebra_mpls.h</in>
+        <in>zebra_mpls_netlink.c</in>
+        <in>zebra_mpls_null.c</in>
+        <in>zebra_mpls_openbsd.c</in>
+        <in>zebra_mpls_vty.c</in>
+        <in>zebra_mroute.c</in>
+        <in>zebra_mroute.h</in>
+        <in>zebra_netns_id.c</in>
+        <in>zebra_netns_id.h</in>
+        <in>zebra_netns_notify.c</in>
+        <in>zebra_netns_notify.h</in>
+        <in>zebra_ns.c</in>
+        <in>zebra_ns.h</in>
+        <in>zebra_pbr.c</in>
+        <in>zebra_pbr.h</in>
+        <in>zebra_ptm.c</in>
+        <in>zebra_ptm.h</in>
+        <in>zebra_ptm_redistribute.c</in>
+        <in>zebra_ptm_redistribute.h</in>
+        <in>zebra_pw.c</in>
+        <in>zebra_pw.h</in>
+        <in>zebra_rib.c</in>
+        <in>zebra_rnh.c</in>
+        <in>zebra_rnh.h</in>
+        <in>zebra_routemap.c</in>
+        <in>zebra_routemap.h</in>
+        <in>zebra_snmp.c</in>
+        <in>zebra_static.c</in>
+        <in>zebra_static.h</in>
+        <in>zebra_vrf.c</in>
+        <in>zebra_vrf.h</in>
+        <in>zebra_vty.c</in>
+        <in>zebra_vty_clippy.c</in>
+        <in>zebra_vxlan.c</in>
+        <in>zebra_vxlan.h</in>
+        <in>zebra_vxlan_null.c</in>
+        <in>zebra_vxlan_private.h</in>
+        <in>zserv.c</in>
+        <in>zserv.h</in>
+      </df>
+      <in>config.h</in>
+      <in>defaults.h</in>
+    </df>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <compile>
+        <compiledirpicklist>
+          <compiledirpicklistitem>.</compiledirpicklistitem>
+          <compiledirpicklistitem>${AUTO_FOLDER}</compiledirpicklistitem>
+        </compiledirpicklist>
+        <compiledir>${AUTO_FOLDER}</compiledir>
+        <compilecommandpicklist>
+          <compilecommandpicklistitem>${MAKE} ${ITEM_NAME}.o</compilecommandpicklistitem>
+          <compilecommandpicklistitem>${AUTO_COMPILE}</compilecommandpicklistitem>
+        </compilecommandpicklist>
+        <compilecommand>${AUTO_COMPILE}</compilecommand>
+      </compile>
+      <dbx_gdbdebugger version="1">
+        <gdb_pathmaps>
+        </gdb_pathmaps>
+        <gdb_interceptlist>
+          <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
+        </gdb_interceptlist>
+        <gdb_options>
+          <DebugOptions>
+          </DebugOptions>
+        </gdb_options>
+        <gdb_buildfirst gdb_buildfirst_overriden="false" gdb_buildfirst_old="false"/>
+      </dbx_gdbdebugger>
+      <nativedebugger version="1">
+        <engine>gdb</engine>
+      </nativedebugger>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir>.</rundir>
+        <buildfirst>false</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>

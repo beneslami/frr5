@@ -1,0 +1,7 @@
+#!/bin/bash
+# Hello! This is a shell script written by Ben Eslami.
+# The main puropse of this shell is to ease the procedure of configuration of god damned vtysh
+# Just because we are working on a predefined scenario, there are predefined IP addresses and other configuration, so this script is not for all cases. 
+# But you can follow the lines to figure out how things are done.
+
+vtysh -c "
