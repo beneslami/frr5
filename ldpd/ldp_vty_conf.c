@@ -1161,7 +1161,7 @@ ldp_vty_l2vpn(struct vty *vty, const char *negate, const char *name_str)
 		if (l2vpn == NULL)
 			return (CMD_SUCCESS);
                 
-                //Mehran Memarnejad
+                // 
                 //sending information to zebra to delete VPP configurations before deleting information from frr
                 ldp_asks_zebra_to_do(NO_L2VPN, l2vpn, l2vpn->br_ifname);
                 
@@ -1290,7 +1290,7 @@ ldp_vty_l2vpn_interface(struct vty *vty, const char *negate, const char *ifname)
 
 	if (ldp_iface_is_configured(vty_conf, ifname)) {
 		vty_out (vty, "%% Interface is already in use\n");
-                //Mehran Memarnejad
+                // 
                 //I changed CMD_SUCCESS to CMD_ERR_NOTHING_TODO so that I don't set a configured interface as a VPLS interface member
                 //I searched code and found that this function (ldp_vty_l2vpn_interface) is not used anywhere except in cd ld   
                 return(CMD_ERR_NOTHING_TODO);
@@ -1336,7 +1336,7 @@ vpp_ldp_vty_l2vpn_interface(struct vty *vty, const char *negate, const char *ifn
 
 	if (ldp_iface_is_configured(vty_conf, ifname)) {
 		vty_out (vty, "%% Interface is already in use\n");
-                //Mehran Memarnejad
+                // 
                 //I changed CMD_SUCCESS to CMD_ERR_NOTHING_TODO so that I don't set a configured interface as a VPLS interface member
                 //I searched code and found that this function (ldp_vty_l2vpn_interface) is not used anywhere except in cd ld   
                 return(CMD_ERR_NOTHING_TODO);

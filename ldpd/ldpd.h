@@ -59,7 +59,7 @@
 #define	F_BLACKHOLE		0x0020
 #define	F_REDISTRIBUTED		0x0040
 
-//Mehran Memarnejad
+// 
 //due to keeping name mapping in ZEBRA, Here we are going to implement a generic message sending from LDP to ZEBRA
 #define BRIDGE 1
 #define NO_BRIDGE 2
@@ -164,7 +164,7 @@ enum imsg_type {
 	IMSG_ACL_CHECK,
 	IMSG_INIT,
 	IMSG_PW_UPDATE,
-        //Mehran Memarnejad
+        // 
         IMSG_PW_MPW_BRIDGE,
 };
 

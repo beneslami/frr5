@@ -2352,13 +2352,13 @@ static int install_evpn_route_entry_in_vrf(struct bgp *bgp_vrf,
 			prefix2str(evp, buf, sizeof(buf)),
 			prefix2str(pp, buf1, sizeof(buf)),
 			vrf_id_to_name(bgp_vrf->vrf_id));
-                //m.salari: l3vpn
+                //: l3vpn
 		printf(
 			"installing evpn prefix %s as ip prefix %s in vrf %s",
 			prefix2str(evp, buf, sizeof(buf)),
 			prefix2str(pp, buf1, sizeof(buf)),
 			vrf_id_to_name(bgp_vrf->vrf_id));
-                //\m.salari: l3vpn
+                //\: l3vpn
 	}
 
 	/* Create (or fetch) route within the VRF. */

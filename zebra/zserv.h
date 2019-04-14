@@ -40,7 +40,7 @@
 #include "zebra/zebra_vrf.h"  /* for zebra_vrf */
 /* clang-format on */
 
-//Mehran Memarnejad
+// 
 #define BRIDGE 1
 #define NO_BRIDGE 2
 #define NO_L2VPN 3

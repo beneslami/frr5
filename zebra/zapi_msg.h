@@ -40,7 +40,7 @@
  */
 extern void zserv_handle_commands(struct zserv *client, struct stream *msg);
 
-//Mehran Memarnejad
+// 
 extern int zsend_pw_set_mpw_bridge(struct zserv *client, struct zebra_pw *pw, char *mpls_tunnel);
 static int zread_vpp_bridge(ZAPI_HANDLER_ARGS);
 

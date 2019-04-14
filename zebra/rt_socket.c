@@ -194,10 +194,10 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 						  gate_buf, INET_ADDRSTRLEN);
 			}
                         
-                        //m.salari: l3vpn deleteme:
+                        //: l3vpn deleteme:
                         if (!gate) {
                             printf("\t1 XXYYZZWW\t%s: %s: attention! gate not found for re %p", __func__, prefix_buf, re);
-                        }//\m.salari
+                        }//\
 
 			switch (error) {
 			/* We only flag nexthops as being in FIB if rtm_write()
@@ -208,7 +208,7 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 					zlog_debug(
 						"%s: %s: successfully did NH %s",
 						__func__, prefix_buf, gate_buf);
-                                printf("\t2 XXYYZZWW\t%s: %s: successfully did NH %s",__func__, prefix_buf, gate_buf);//m.salari: l3vpn deleteme
+                                printf("\t2 XXYYZZWW\t%s: %s: successfully did NH %s",__func__, prefix_buf, gate_buf);//: l3vpn deleteme
 				break;
 
 			/* The only valid case for this error is kernel's
@@ -222,10 +222,10 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 					zlog_err(
 						"%s: rtm_write() returned %d for command %d",
 						__func__, error, cmd);
-                                //m.salari: l3vpn deleteme:
+                                //: l3vpn deleteme:
                                 if (cmd != RTM_ADD)
                                         printf("\t3err XXYYZZWW\t%s: rtm_write() returned %d for command %d",__func__, error, cmd); 
-                                //\m.salari
+                                //\
 				continue;
 				break;
 
@@ -248,7 +248,7 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 					__func__,
 					prefix2str(p, prefix_buf, sizeof(prefix_buf)),
 					error,
-					lookup_msg(rtm_type_str, cmd, NULL));//m.salari: l3vpn deleteme
+					lookup_msg(rtm_type_str, cmd, NULL));//: l3vpn deleteme
 				break;
 			}
 		} /* if (cmd and flags make sense) */
@@ -258,7 +258,7 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 				   nexthop->flags);
                 printf("\t5 XXYYZZWW\t%s: odd command %s for flags %d", __func__,
                            lookup_msg(rtm_type_str, cmd, NULL),
-                           nexthop->flags);//m.salari: l3vpn deleteme
+                           nexthop->flags);//: l3vpn deleteme
 	} /* for (ALL_NEXTHOPS(...))*/
 
 	/* If there was no useful nexthop, then complain. */
@@ -266,7 +266,7 @@ static int kernel_rtm_ipv4(int cmd, struct prefix *p, struct route_entry *re)
 		zlog_debug("%s: No useful nexthops were found in RIB entry %p",
 			   __func__, re);
         printf("\t6 XXYYZZWW\t%s: No useful nexthops were found in RIB entry %p",
-                   __func__, re);//m.salari: l3vpn deleteme
+                   __func__, re);//: l3vpn deleteme
 
 	return 0; /*XXX*/
 }

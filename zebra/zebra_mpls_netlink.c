@@ -33,7 +33,7 @@ enum dp_req_result kernel_add_lsp(zebra_lsp_t *lsp)
 {
 	int ret;
         
-        //Mehran Memarnejad
+        // 
         vpp_data.table_operation=VPP_FLAG_ADD;
         vpp_data.mpls_operation=VPP_SWAP;
         
@@ -66,7 +66,7 @@ enum dp_req_result kernel_upd_lsp(zebra_lsp_t *lsp)
 {
 	int ret;
         
-        //Mehran Memarnejad
+        // 
         vpp_data.table_operation=VPP_FLAG_UPDATE;
         vpp_data.mpls_operation=VPP_SWAP;
     
@@ -91,7 +91,7 @@ enum dp_req_result kernel_del_lsp(zebra_lsp_t *lsp)
 {
 	int ret;
         
-        //Mehran Memarnejad
+        // 
         vpp_data.table_operation=VPP_FLAG_DEL;
         vpp_data.mpls_operation=VPP_SWAP;
     
@@ -124,14 +124,14 @@ int mpls_kernel_init(void)
 	if (stat("/proc/sys/net/mpls", &st) != 0)
 		return -1;
         
-        //Mehran Memarnejad
+        // 
 	reset_vpp_data(&vpp_data);
         
-        //Mehran Memarnejad
+        // 
         system("sudo vppctl mpls table add 0");
         printf("Adding mpls table 0...\n");
         
-        //Mehran Memarnejad
+        // 
         enable_all_if_mpls();
         printf("Enabling mpls on all interfaces...\n");
         

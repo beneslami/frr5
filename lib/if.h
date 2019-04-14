@@ -529,7 +529,7 @@ extern struct nbr_connected *nbr_connected_new(void);
 extern void nbr_connected_free(struct nbr_connected *);
 struct nbr_connected *nbr_connected_check(struct interface *, struct prefix *);
 
-//Mehran Memarnejad
+// 
 void vpp_if_terminate(struct vrf *vrf);
 
 /* link parameters */

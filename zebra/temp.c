@@ -4,7 +4,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					    struct rtmsg *rtmsg,
 					    size_t req_size, int cmd)
 {
-//    printf("\tM.SALARIDEBUG: Calling %s\n", __func__); // Delete me
+//    printf("\tDEBUG: Calling %s\n", __func__); // Delete me
 	struct mpls_label_stack *nh_label;
 	mpls_lse_t out_lse[MPLS_MAX_LABELS];
 	int num_labels = 0;
@@ -18,7 +18,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 	 */
 	label_buf[0] = '\0';
         
-        //Mehran Memarnejad
+        // 
         //Here we are building single path route
         vpp_data.is_multipath = VPP_SINGLE_PATH;
     
@@ -27,21 +27,21 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 
 
         
-        //m.salari: l3vpn
+        //: l3vpn
         int table_id = vpp_vrf_id_to_table_id(nexthop->vrf_id);
         vpp_data.vrf = vpp_vrf_list[table_id];
-        //\m.salari
+        //\
         
         
-        //m.salari debug deleteme
+        // debug deleteme
         int depth = -1; 
         printf("(((((( ");
         printf("desc:%s ", routedesc);
         printf("rtmtbl:%u ", rtmsg->rtm_table);
-        //\m.salari debug deleteme
+        //\ debug deleteme
 
 	for (struct nexthop *nh = nexthop; nh; nh = nh->rparent) {
-                //m.salari: debug, deleteme
+                //: debug, deleteme
                 depth++; 
                 printf(" [ DPT %d, ", depth);
                 printf("gat=%s, ", inet_ntoa(nh->gate.ipv4));
@@ -58,7 +58,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 
 
                 }
-		//\m.salari: debug, deleteme
+		//\: debug, deleteme
                 
                 char label_buf1[20];
 
@@ -66,15 +66,15 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 		if (!nh_label || !nh_label->num_labels)
 			continue;
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.num_labels = 0;
         
 		for (int i = 0; i < nh_label->num_labels; i++) {
-                    //m.salari: dbug, deleteme
+                    //: dbug, deleteme
                     printf("Lbl[%d]=%u ", i, nh->nh_label->label[i]);
-                    //\m.salari: dbug, deleteme
+                    //\: dbug, deleteme
 
-                        //Mehran Memarnejad
+                        // 
                         //Add here so that we can count all labels including implicit null
                         vpp_data.label[i] = nh_label->label[i];
                         vpp_data.num_labels++;
@@ -166,7 +166,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 vpp_data.nexthop_addr.ipv4 = nexthop->gate.ipv4;
                 //vpp_data.ifname = "Giga\0"; //We will get it using inet_aton()
@@ -222,10 +222,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 //inet_aton("0.0.0.0", &(vpp_data.nexthop_addr.ipv4)); //No via , reset_vpp_data() handle this
-                //vpp_data.ifname = "GigaMehran\0"; //For now just be NULL
+                //vpp_data.ifname = "Giga\0"; //For now just be NULL
                 vpp_data.table_index = 0; //For now in default table
         
 		if (IS_ZEBRA_DEBUG_KERNEL)
@@ -252,8 +252,8 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 				routedesc, nexthop->ifindex, nexthop->vrf_id);
 	}
         
-        //Mehran Memarnejad
-        vpp_print_debug2(&vpp_data, "end of _route_build_singlepath:");//m.salari
+        // 
+        vpp_print_debug2(&vpp_data, "end of _route_build_singlepath:");//
         vpp_talk(&vpp_data);
     
 }

@@ -80,7 +80,7 @@ struct gw_family_t {
 char ipv4_ll_buf[16] = "169.254.0.1";
 struct in_addr ipv4_ll;
 
-//Mehran Memarnejad
+// 
 //Things to be done to transmit MPLS data between frr to vpp
 //1-Declare a struct containing essential info about labels (OK)
 //2-Gathering MPLS info from _netlink_build_* functions (OK)
@@ -108,7 +108,7 @@ int nic_names_refill()
     sprintf(str, "sudo vppctl show tap-inject | awk \'{print $0}\' | wc -l");
     int LINE_BUFSIZE = 100;
     char line[LINE_BUFSIZE];
-    //Mehran 
+    // 
     FILE * pipe = popen(str, "r");
     fgets(line, LINE_BUFSIZE, pipe);
     sscanf(line, "%d\n", &nic_names_n);
@@ -1345,7 +1345,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 	 */
 	label_buf[0] = '\0';
         
-        //Mehran Memarnejad
+        // 
         //Here we are building single path route
         vpp_data.is_multipath = VPP_SINGLE_PATH;
     
@@ -1357,11 +1357,11 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 		if (!nh_label || !nh_label->num_labels)
 			continue;
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.num_labels = 0;
         
 		for (int i = 0; i < nh_label->num_labels; i++) {
-                        //Mehran Memarnejad
+                        // 
                         //Add here so that we can count all labels including implicit null
                         vpp_data.label[i] = nh_label->label[i];
                         vpp_data.num_labels++;
@@ -1450,7 +1450,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 vpp_data.nexthop_addr.ipv4 = nexthop->gate.ipv4;
                 //vpp_data.ifname = "Giga\0"; //We will get it using inet_aton()
@@ -1506,10 +1506,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 //inet_aton("0.0.0.0", &(vpp_data.nexthop_addr.ipv4)); //No via , reset_vpp_data() handle this
-                //vpp_data.ifname = "GigaMehran\0"; //For now just be NULL
+                //vpp_data.ifname = "Giga\0"; //For now just be NULL
                 vpp_data.table_index = 0; //For now in default table
         
 		if (IS_ZEBRA_DEBUG_KERNEL)
@@ -1536,7 +1536,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 				routedesc, nexthop->ifindex, nexthop->vrf_id);
 	}
         
-        //Mehran Memarnejad
+        // 
         vpp_talk(&vpp_data);
     
 }
@@ -1582,7 +1582,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 	 */
 	label_buf[0] = '\0';
         
-        //Mehran Memarnejad
+        // 
         vpp_data.is_multipath = VPP_MULTI_PATH;
     
 	assert(nexthop);
@@ -1594,7 +1594,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 			continue;
 
 		for (int i = 0; i < nh_label->num_labels; i++) {
-                        //Mehran Memarnejad
+                        // 
                         vpp_data.label[i] = nh_label->label[i];
                         vpp_data.num_labels++;
                         
@@ -1682,7 +1682,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 		else if (nexthop->src.ipv4.s_addr)
 			*src = &nexthop->src;
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 vpp_data.nexthop_addr.ipv4 = nexthop->gate.ipv4;
                 //vpp_data.ifname = "\0"; //For now just be NULL
@@ -1730,7 +1730,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 		else if (nexthop->src.ipv4.s_addr)
 			*src = &nexthop->src;
                 
-                //Mehran Memarnejad
+                // 
                 vpp_data.ifindex = nexthop->ifindex;
                 inet_aton("0.0.0.0", &(vpp_data.nexthop_addr.ipv4)); //No Via
                 //vpp_data.ifname = "\0"; //For now just be NULL
@@ -1850,16 +1850,16 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 	int setsrc = 0;
 	union g_addr src;
         
-        //Mehran Memarnejad
+        // 
         //Base on my investigation in FRR code, I found that if we want to push MPLS label on a packet
         //the task of making netlink message is done in two parts:
         //1-IP part of message is done here in this function, e.g. source IP
         //2-MPLS part of message is done by calling _netlink_route_build_multipath() a few lines ahead. This is the same as what is done for SWAP :)
 
-        //Mehran Memarnejad
+        // 
         vpp_data.mpls_operation=VPP_PUSH;
 
-        //Mehran Memarnejad
+        // 
         if(cmd == RTM_DELROUTE)
             vpp_data.table_operation=VPP_FLAG_DEL;
         else if ((cmd == RTM_NEWROUTE) && (update == 0))
@@ -1907,7 +1907,7 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 
 	addattr_l(&req.n, sizeof req, RTA_DST, &p->u.prefix, bytelen);
         
-        //Mehran Memarnejad
+        // 
         vpp_data.dst_addr.ipv4 = p->u.prefix4;
         vpp_data.mask = p->prefixlen;
     
@@ -3049,7 +3049,7 @@ int netlink_mpls_multipath(int cmd, zebra_lsp_t *lsp)
 	lse = mpls_lse_encode(lsp->ile.in_label, 0, 0, 1);
 	addattr_l(&req.n, sizeof req, RTA_DST, &lse, sizeof(mpls_lse_t));
         
-        //Mehran Memarnejad
+        // 
         vpp_data.in_label = lsp->ile.in_label;
     
     

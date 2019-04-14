@@ -54,7 +54,7 @@ static int	 ldp_zebra_read_route(int, struct zclient *, zebra_size_t,
 		    vrf_id_t);
 static int	 ldp_zebra_read_pw_status_update(int, struct zclient *,
 		    zebra_size_t, vrf_id_t);
-//Mehran Memarnejad
+// 
 static int	 ldp_zebra_read_pw_mpw_bridge(int, struct zclient *,
 		    zebra_size_t, vrf_id_t);
 static void	 ldp_zebra_connected(struct zclient *);
@@ -63,7 +63,7 @@ static struct zclient	*zclient;
 
 void ldp_asks_zebra_to_do(uint32_t todo, struct l2vpn *l2vpn, char *br_name);
 
-//Mehran Memarnejad
+// 
 void ldp_asks_zebra_to_do(uint32_t todo, struct l2vpn *l2vpn, char *br_name)
 {
     
@@ -581,7 +581,7 @@ ldp_zebra_read_pw_status_update(int command, struct zclient *zclient,
 	return (0);
 }
 
-//Mehran Memarnejad
+// 
 static int
 ldp_zebra_read_pw_mpw_bridge(int command, struct zclient *zclient,
     zebra_size_t length, vrf_id_t vrf_id)
@@ -628,7 +628,7 @@ ldp_zebra_init(struct thread_master *master)
 	zclient->redistribute_route_add = ldp_zebra_read_route;
 	zclient->redistribute_route_del = ldp_zebra_read_route;
 	zclient->pw_status_update = ldp_zebra_read_pw_status_update;
-        //Mehran Memarnejad
+        // 
         zclient->pw_mpw_bridge = ldp_zebra_read_pw_mpw_bridge;
 }
 

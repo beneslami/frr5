@@ -152,7 +152,7 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
 	struct vrf *vrf = NULL;
 	int new = 0;
 	
-	//Mehran Memarnejad
+	// 
 	static int vpp_num_vrf = 0;
 
 	if (debug_vrf)
@@ -172,7 +172,7 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
 		vrf = vrf_lookup_by_id(vrf_id);
 
 	if (vrf == NULL) {
-		//Mehran Memarnejad
+		// 
 		if(strcmp(name, VRF_DEFAULT_NAME)){
             char cmd[200];
             //create vrf
@@ -249,7 +249,7 @@ void vrf_delete(struct vrf *vrf)
 		(*vrf_master.vrf_delete_hook)(vrf);
 
 	QOBJ_UNREG(vrf);
-	//Mehran Memarnejad
+	// 
     //Don't delete interfaces, instead bind it to default VRF
     //if default vrf is to be deleted, then delete interfaces as well, else bind interfaces to default vrf
     if(vrf->vrf_id == 0)
@@ -262,7 +262,7 @@ void vrf_delete(struct vrf *vrf)
 	if (vrf->name[0] != '\0')
 		RB_REMOVE(vrf_name_head, &vrfs_by_name, vrf);
 	
-	//Mehran Memarnejad
+	// 
 	//Don't delete default vrf
     if(vrf->vrf_id != 0){
         char cmd[200];
@@ -766,7 +766,7 @@ DEFUN_NOSH (no_vrf,
 	//	vty_out(vty, "%% Only inactive VRFs can be deleted\n");
 	//	return CMD_WARNING_CONFIG_FAILED;
 	//}
-    //Mehran Memarnejad
+    // 
     char cmd[200];
     sprintf(cmd, "sudo ip link set dev %s down", vrfname);
     printf("%s: %s\n", __func__, cmd);
@@ -777,7 +777,7 @@ DEFUN_NOSH (no_vrf,
     //Don't delete it here, let Linux inform FRR about "ip link del" command and then netlink_vrf_change in if_netlink.c will delete it 
 	//vrf_delete(vrfp);
         
-    //Mehran Memarnejad
+    // 
     //char cmd[200];
     sprintf(cmd, "sudo ip link del dev %s", vrfname);
     printf("%s: %s\n", __func__, cmd);

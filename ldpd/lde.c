@@ -635,7 +635,7 @@ lde_dispatch_parent(struct thread *thread)
 			}
 			memcpy(&ldp_debug, imsg.data, sizeof(ldp_debug));
 			break;
-                //Mehran Memarnejad
+                // 
                 case IMSG_PW_MPW_BRIDGE:
                                              
                         if (imsg.hdr.len != IMSG_HEADER_SIZE +

@@ -81,7 +81,7 @@ struct gw_family_t {
 char ipv4_ll_buf[16] = "169.254.0.1";
 struct in_addr ipv4_ll;
 
-//Mehran Memarnejad
+// 
 //Things to be done to transmit MPLS data between frr to vpp
 //1-Declare a struct containing essential info about labels (OK)
 //2-Gathering MPLS info from _netlink_build_* functions (OK)
@@ -109,7 +109,7 @@ int nic_names_refill()
     sprintf(str, "sudo vppctl show tap-inject | awk \'{print $0}\' | wc -l");
     int LINE_BUFSIZE = 100;
     char line[LINE_BUFSIZE];
-    //Mehran 
+    // 
     FILE * pipe = popen(str, "r");
     fgets(line, LINE_BUFSIZE, pipe);
     sscanf(line, "%d\n", &nic_names_n);
@@ -400,21 +400,21 @@ void vpp_talk(struct vpp_mpls_data *data)
     switch (data->table_operation) {
         case(VPP_FLAG_ADD):
             vpp_cmd_creator(data, cmd);
-//            printf("vpp_talk > VPP_FLAG_ADD\n");//m.salari debug
+//            printf("vpp_talk > VPP_FLAG_ADD\n");// debug
             system(cmd);
             printf("%s\n", cmd);
             save_to_vpp_file(data->in_label, inet_ntoa(data->nexthop_addr.ipv4), data->ifname, data->label, data->num_labels, data->vrf.table_id, VPP_FLAG_ADD);
             break;
 
         case(VPP_FLAG_DEL):
-            //m.salari debug l3vpn
+            // debug l3vpn
             vpp_cmd_creator(data, cmd);
 //            printf("vpp_talk > VPP_FLAG_DEL\n");
             system(cmd); // M.Moslemi
             printf("%s\n", cmd);
             save_to_vpp_file(data->in_label, inet_ntoa(data->nexthop_addr.ipv4), data->ifname, data->label, data->num_labels, data->vrf.table_id, VPP_FLAG_DEL);
             break;
-            //\m.salari debug l3vpn
+            //\ debug l3vpn
 
         case(VPP_FLAG_UPDATE):
             //1. Delete the last installed entry
@@ -503,13 +503,13 @@ void vpp_cmd_creator(struct vpp_mpls_data *data, char *cmd)
                     }
                 }
             }
-            //m.salari l3vpn
+            // l3vpn
             else {
 //              Do it here ...
                 sprintf(cmd + strlen(cmd), " via %s", inet_ntoa(data->recursive_nexthop.ipv4));
 
             }
-            //\m.salari l3vpn
+            //\ l3vpn
                 
             
             //Output interface
@@ -560,7 +560,7 @@ void vpp_cmd_creator(struct vpp_mpls_data *data, char *cmd)
             
             sprintf(cmd, "sudo vppctl mpls");
             
-            //m.salari l3vpn
+            // l3vpn
             int l3vpn_route = 0;
             if (data->mpls_route_type == ZEBRA_LSP_BGP) {
 //                char * vrfnam = vpp_vrf_id_to_name(data->ifindex);
@@ -591,7 +591,7 @@ void vpp_cmd_creator(struct vpp_mpls_data *data, char *cmd)
                 }
                 break;
             }
-            //\m.salari l3vpn
+            //\ l3vpn
 
             //Input label
             if(data->in_label){
@@ -656,13 +656,13 @@ void reset_vpp_data(struct vpp_mpls_data *data)
     data->mpls_operation = VPP_NOTHING;
     data->is_multipath = VPP_SINGLE_PATH;
     
-    //m.salari l3vpn
+    // l3vpn
     data->vrf = vpp_vrf_list[0];
     data->is_recursive = 0;
     inet_aton("0.0.0.0", &(data->recursive_nexthop.ipv4));
     data->recursive_label = MPLS_INVALID_LABEL;
     vpp_data.mpls_route_type = -1;
-    //\m.salari l3vpn
+    //\ l3vpn
     
     
     return;
@@ -1476,7 +1476,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 	struct mpls_label_stack *nh_label;
 	mpls_lse_t out_lse[MPLS_MAX_LABELS];
 	int num_labels = 0;
-        //Mehran Memarnejad
+        // 
         vpp_data.num_labels = 0;
 	char label_buf[256];
 
@@ -1488,7 +1488,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 	 */
 	label_buf[0] = '\0';
         
-        //Mehran Memarnejad
+        // 
         //Here we are building single path route
         vpp_data.is_multipath = VPP_SINGLE_PATH;
     
@@ -1497,10 +1497,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 
 
         
-        //m.salari: l3vpn
+        //: l3vpn
 //        int table_id = vpp_vrf_id_to_table_id(nexthop->vrf_id);
 //        vpp_data.vrf = vpp_vrf_list[table_id];
-        //\m.salari
+        //\
         
         
         //Benyamin Eslami -> debug
@@ -1508,17 +1508,17 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
         //printf("vrf_id 2 table_id: %u - > %u\n",bgp->vrf_id, table_id);
         //Benyamin Eslami -> debug
                 
-        //m.salari debug deleteme
+        // debug deleteme
 //        int depth = -1; 
 //        printf("(((((( ");
 //        printf("%s: ", routedesc);
 //        printf("rtmtbl:%u ", rtmsg->rtm_table);
-        //\m.salari debug deleteme
+        //\ debug deleteme
 
         
         
 	for (struct nexthop *nh = nexthop; nh; nh = nh->rparent) {
-                //m.salari: debug, deleteme  lllllllllll
+                //: debug, deleteme  lllllllllll
 //                depth++; 
 //                printf(" [ DPT %d, ", depth);
 //                printf("gat=%s, ", inet_ntoa(nh->gate.ipv4));
@@ -1527,7 +1527,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 //                    printf("resgat=%s, ", inet_ntoa(nh->resolved->gate.ipv4));
 //                    printf("resvrf=%u, ", nh->resolved->vrf_id);
 //                }
-		//\m.salari: debug, deleteme
+		//\: debug, deleteme
                 char label_buf1[20];
 		nh_label = nh->nh_label;
 		if (!nh_label || !nh_label->num_labels)
@@ -1536,7 +1536,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
         
 		for (int i = 0; i < nh_label->num_labels; i++) {
 
-                        //Mehran Memarnejad
+                        // 
                         //Add here so that we can count all labels including implicit null
 //                        vpp_data.label[i] = nh_label->label[i];
 //                        vpp_data.num_labels++;
@@ -1559,22 +1559,22 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 
 			out_lse[num_labels] =
 				mpls_lse_encode(nh_label->label[i], 0, 0, 0);
-                        vpp_data.label[vpp_data.num_labels] = nh_label->label[i];//m.salari
+                        vpp_data.label[vpp_data.num_labels] = nh_label->label[i];//
                         vpp_data.num_labels++;
 			num_labels++;
 		}
-                //m.salari
+                //
 //                if (vpp_data.num_labels == 0  && vpp_data.in_label == MPLS_INVALID_LABEL) {
 //                    vpp_data.mpls_operation = VPP_NOTHING;
 //                }
-                //\m.salari
+                //\
 
 
-//            printf(" ] ");//m.salari
+//            printf(" ] ");//
 	}//eo for (struct nexthop *nh = nexthop; nh; nh = nh->rparent)
-//        printf(" ))))))\n");//m.salari
+//        printf(" ))))))\n");//
 
-        //m.salari
+        //
         //behtare copye label ha biad inja be jaye halghe nh->rparent ;)
 //        int i;
 //        vpp_data.num_labels = num_labels;
@@ -1584,7 +1584,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 //    }
 
 //        out_lse[num_labels] 
-        //\m.salari
+        //\
         
 	if (num_labels) {
 		/* Set the BoS bit */
@@ -1632,10 +1632,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 		return;
 	}
 
-        //m.salari ffffff
+        // ffffff
 //        vpp_data.ifindex = nexthop->ifindex;
 //        if_indextoname(vpp_data.ifindex, vpp_data.ifname); 
-        //\m.salari 
+        //\ 
         
 	if (nexthop->type == NEXTHOP_TYPE_IPV4
 	    || nexthop->type == NEXTHOP_TYPE_IPV4_IFINDEX) {
@@ -1654,7 +1654,7 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
 //                vpp_data.ifindex = nexthop->ifindex;
                 if (!vpp_data.is_recursive) {
                     vpp_data.nexthop_addr.ipv4 = nexthop->gate.ipv4;
@@ -1712,10 +1712,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 					  &nexthop->src.ipv4, bytelen);
 		}
                 
-                //Mehran Memarnejad
+                // 
 //                vpp_data.ifindex = nexthop->ifindex;
                 //inet_aton("0.0.0.0", &(vpp_data.nexthop_addr.ipv4)); //No via , reset_vpp_data() handle this
-                //vpp_data.ifname = "GigaMehran\0"; //For now just be NULL
+                //vpp_data.ifname = "Giga\0"; //For now just be NULL
 //                vpp_data.table_index = 0; //For now in default table
         
 		if (IS_ZEBRA_DEBUG_KERNEL)
@@ -1742,10 +1742,10 @@ static void _netlink_route_build_singlepath(const char *routedesc, int bytelen,
 				routedesc, nexthop->ifindex, nexthop->vrf_id);
 	}
         
-        vpp_data.nexthop_type = nexthop->type; //m.salari
+        vpp_data.nexthop_type = nexthop->type; //
         
-//        //Mehran Memarnejad
-//        vpp_print_debug2(&vpp_data, "end of _route_build_singlepath:");//m.salari
+//        // 
+//        vpp_print_debug2(&vpp_data, "end of _route_build_singlepath:");//
 //        vpp_talk(&vpp_data);
 }
 
@@ -1791,7 +1791,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 	 */
 	label_buf[0] = '\0';
         
-        //Mehran Memarnejad
+        // 
         vpp_data.is_multipath = VPP_MULTI_PATH;
     
 	assert(nexthop);
@@ -1803,7 +1803,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 			continue;
 
 		for (int i = 0; i < nh_label->num_labels; i++) {
-                        //Mehran Memarnejad
+                        // 
                         vpp_data.label[i] = nh_label->label[i];
                         vpp_data.num_labels++;
                         
@@ -1826,11 +1826,11 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 				mpls_lse_encode(nh_label->label[i], 0, 0, 0);
 			num_labels++;
 		}
-                //m.salari
+                //
 //                if (vpp_data.num_labels == 0 && vpp_data.in_label == MPLS_INVALID_LABEL) {
 //                    vpp_data.mpls_operation = VPP_NOTHING;
 //                }
-                //\m.salari
+                //\
 	}
 
 	if (num_labels) {
@@ -1896,7 +1896,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 		else if (nexthop->src.ipv4.s_addr)
 			*src = &nexthop->src;
                 
-                //Mehran Memarnejad
+                // 
 //                vpp_data.ifindex = nexthop->ifindex;
                 if (!vpp_data.is_recursive) {
                     vpp_data.nexthop_addr.ipv4 = nexthop->gate.ipv4;
@@ -1948,7 +1948,7 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 		else if (nexthop->src.ipv4.s_addr)
 			*src = &nexthop->src;
                 
-                //Mehran Memarnejad
+                // 
 //                vpp_data.ifindex = nexthop->ifindex;
 //                inet_aton("0.0.0.0", &(vpp_data.nexthop_addr.ipv4)); //No Via
                 //vpp_data.ifname = "\0"; //For now just be NULL
@@ -1961,8 +1961,8 @@ static void _netlink_route_build_multipath(const char *routedesc, int bytelen,
 				routedesc, nexthop->ifindex);
 	}
     
-        vpp_data.nexthop_type = nexthop->type; //m.salari
-//    vpp_print_debug2(&vpp_data, "end of _route_build_multipath");//m.salari
+        vpp_data.nexthop_type = nexthop->type; //
+//    vpp_print_debug2(&vpp_data, "end of _route_build_multipath");//
 //    vpp_talk(&vpp_data);
 }
 
@@ -1973,7 +1973,7 @@ static inline void _netlink_mpls_build_singlepath(const char *routedesc,
 						  size_t req_size, int cmd)
 {
      // printf("Calling %s\n", __func__);
-    //m.salari jhjkhasrltbhlkjhawet
+    // jhjkhasrltbhlkjhawet
     int nl = nhlfe->nexthop->nh_label->num_labels;
     vpp_data.mpls_route_type = nhlfe->type;
 //    printf("\tMPLSROUTE -------> routedesc=%s ", routedesc ); // Delete me
@@ -2003,7 +2003,7 @@ static inline void _netlink_mpls_build_singlepath(const char *routedesc,
 //    }
 //    printf("}\n");
 
-    //\m.salari jhjkhasrltbhlkjhawet
+    //\ jhjkhasrltbhlkjhawet
     
 	int bytelen;
 	uint8_t family;
@@ -2054,7 +2054,7 @@ static void _netlink_route_debug(int cmd, struct prefix *p,
 			prefix2str(p, buf, sizeof(buf)),
 			zvrf_id(zvrf), tableid);
 	}
-    //m.salari l3vpn debug
+    // l3vpn debug
 ////        else{
 //            char buf[PREFIX_STRLEN];
 //		printf(
@@ -2063,7 +2063,7 @@ static void _netlink_route_debug(int cmd, struct prefix *p,
 //			prefix2str(p, buf, sizeof(buf)),
 //			zvrf_id(zvrf), tableid);
 ////        }
-    //\m.salari l3vpn debug
+    //\ l3vpn debug
 }
 
 static void _netlink_mpls_debug(int cmd, uint32_t label, const char *routedesc)
@@ -2072,10 +2072,10 @@ static void _netlink_mpls_debug(int cmd, uint32_t label, const char *routedesc)
         if (IS_ZEBRA_DEBUG_KERNEL)
 		zlog_debug("netlink_mpls_multipath() (%s): %s %u/20", routedesc,
 			   nl_msg_type_to_str(cmd), label);
-        //m.salari l3vpn debug
+        // l3vpn debug
 //            printf("netlink_mpls_multipath() (%s): %s %u/20", routedesc,
 //			   nl_msg_type_to_str(cmd), label);
-        //\m.salari l3vpn debug
+        //\ l3vpn debug
 }
 
 static int netlink_neigh_update(int cmd, int ifindex, uint32_t addr, char *lla,
@@ -2125,16 +2125,16 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 	int setsrc = 0;
 	union g_addr src;
         
-        //Mehran Memarnejad
+        // 
         //Base on my investigation in FRR code, I found that if we want to push MPLS label on a packet
         //the task of making netlink message is done in two parts:
         //1-IP part of message is done here in this function, e.g. source IP
         //2-MPLS part of message is done by calling _netlink_route_build_multipath() a few lines ahead. This is the same as what is done for SWAP :)
 
-        //Mehran Memarnejad
+        // 
         vpp_data.mpls_operation=VPP_PUSH;
-        vpp_data.is_recursive = 0; //m.salari
-        vpp_data.table_operation= update ? VPP_FLAG_UPDATE : VPP_FLAG_ADD; //m.salari
+        vpp_data.is_recursive = 0; //
+        vpp_data.table_operation= update ? VPP_FLAG_UPDATE : VPP_FLAG_ADD; //
     
 	struct {
 		struct nlmsghdr n;
@@ -2148,11 +2148,11 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 	zns = zvrf->zns;
 	memset(&req, 0, sizeof req - NL_PKT_BUF_SIZE);
 
-        //m.salari
+        //
         vpp_data.vrf.vrf_id = zvrf->vrf->vrf_id;
         vpp_data.vrf.table_id = zvrf->table_id;
         strcpy(vpp_data.vrf.name, zvrf->vrf->name);
-        //\m.salari
+        //\
         
 	bytelen = (family == AF_INET ? 4 : 16);
 
@@ -2182,7 +2182,7 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
         }
 	addattr_l(&req.n, sizeof req, RTA_DST, &p->u.prefix, bytelen);
         
-        //Mehran Memarnejad
+        // 
         vpp_data.dst_addr.ipv4 = p->u.prefix4;
         vpp_data.mask = p->prefixlen;
         
@@ -2210,7 +2210,7 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 //                vpp_data.table_operation=VPP_FLAG_DEL;
 //                printf("*****************************************************\n");
  //\ Benyamin. Eslami               
-            //vpp_print_debug2(&vpp_data, "_is it necessary?????");//m.salari
+            //vpp_print_debug2(&vpp_data, "_is it necessary?????");//
             //vpp_talk(&vpp_data); //TO: Dear Mohammad Moslemi:: Here, all required information for route deletion (destination prefix, vrf info, IF_index) are prepared! Just make corresponding vpp command for route delete
         //As i understood, delete route doesn't neet do VIA address. because of code below (find it)
 //       ---->    if (!update && cmd == RTM_DELROUTE)
@@ -2364,9 +2364,9 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 				routedesc = nexthop->rparent
 						    ? "recursive, single-path"
 						    : "single-path";
-                                //m.salari
+                                //
                                 vpp_data.is_multipath = VPP_SINGLE_PATH;
-                                //\m.salari
+                                //\
 				_netlink_route_build_singlepath(
 					routedesc, bytelen, nexthop, &req.n,
 					&req.r, sizeof req, cmd);
@@ -2448,9 +2448,9 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 						    ? "recursive, multipath"
 						    : "multipath";
 				nexthop_num++;
-                                //m.salari
+                                //
                                 vpp_data.is_multipath = VPP_MULTI_PATH;
-                                //\m.salari
+                                //\
 				_netlink_route_build_multipath(
 					routedesc, bytelen, nexthop, rta, rtnh,
 					&req.r, &src1);
@@ -2482,9 +2482,9 @@ static int netlink_route_multipath(int cmd, struct prefix *p,
 				  RTA_DATA(rta), RTA_PAYLOAD(rta));
 	}
 
-        //m.salari
+        //
         vpp_data.is_recursive = nexthop->rparent ? 1 : 0;
-        //m.salari
+        //
         
         
 	/* If there is no useful nexthop then return. */
@@ -2536,14 +2536,14 @@ skip:
         }
 //\Benyamin.Eslami
        
-        //m.salari 
+        // 
         if (cmd != RTM_DELROUTE || update) {
             vpp_data.ifindex = nexthop->ifindex;
             if_indextoname(vpp_data.ifindex, vpp_data.ifname); 
         }
-        vpp_print_debug2(&vpp_data, "end of netlink_route_multipath:");//m.salari
+        vpp_print_debug2(&vpp_data, "end of netlink_route_multipath:");//
         vpp_talk(&vpp_data);
-        //\m.salari
+        //\
 
 	/* Talk to netlink socket. */
 	return netlink_talk(netlink_talk_filter, &req.n, &zns->netlink_cmd, zns,
@@ -3421,7 +3421,7 @@ int netlink_mpls_multipath(int cmd, zebra_lsp_t *lsp)
 	lse = mpls_lse_encode(lsp->ile.in_label, 0, 0, 1);
 	addattr_l(&req.n, sizeof req, RTA_DST, &lse, sizeof(mpls_lse_t));
         
-        //Mehran Memarnejad
+        // 
         vpp_data.in_label = lsp->ile.in_label;
     
     
@@ -3505,13 +3505,13 @@ int netlink_mpls_multipath(int cmd, zebra_lsp_t *lsp)
 
         
         
-        //m.salari
+        //
         vpp_data.ifindex = nexthop->ifindex;
         if_indextoname(vpp_data.ifindex, vpp_data.ifname); 
         vpp_data.table_operation = cmd == RTM_NEWROUTE ? VPP_FLAG_ADD : cmd == RTM_DELROUTE ? VPP_FLAG_DEL : VPP_FLAG_NOTHING;
-        vpp_print_debug2(&vpp_data, "end of netlink_mpls_multipath:");//m.salari
+        vpp_print_debug2(&vpp_data, "end of netlink_mpls_multipath:");//
         vpp_talk(&vpp_data);
-        //\m.salari
+        //\
 
         
 	/* Talk to netlink socket. */

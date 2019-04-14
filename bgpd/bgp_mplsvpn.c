@@ -46,9 +46,9 @@
 #include "bgpd/bgp_nexthop.h"
 #include "bgpd/bgp_nht.h"
 
-#include "bgpd/bgp_rd.h"//m.salari
+#include "bgpd/bgp_rd.h"//
 #include "zebra/vpp.h"
-#include "bgpd.h"//m.salari
+#include "bgpd.h"//
 
 #if ENABLE_BGP_VNC
 #include "bgpd/rfapi/rfapi_backend.h"
@@ -100,7 +100,7 @@ void encode_label(mpls_label_t label, mpls_label_t *label_pnt)
 	*pnt++ = ((label << 4) + 1) & 0xff; /* S=1 */
 }
 
-//m.salari: l3vpn
+//: l3vpn
 char *prefix_rt2str(struct prefix_rd *prd, char *buf, size_t size)
 {
 	uint8_t *pnt;
@@ -140,10 +140,10 @@ char *prefix_rt2str(struct prefix_rd *prd, char *buf, size_t size)
 	}
 #endif
 
-//	snprintf(buf, size, "Unknown Type: %d", type);//m.salari: This line was not a comment
+//	snprintf(buf, size, "Unknown Type: %d", type);//: This line was not a comment
 	return buf;
 }
-//\m.salari: l3vpn
+//\: l3vpn
 
 int bgp_nlri_parse_vpn(struct peer *peer, struct attr *attr,
 		       struct bgp_nlri *packet)
@@ -239,7 +239,7 @@ int bgp_nlri_parse_vpn(struct peer *peer, struct attr *attr,
 
 		/* Copy routing distinguisher to rd. */
 		memcpy(&prd.val, pnt + BGP_LABEL_BYTES, 8);
-                //m.salari: l3vpn: finding rt
+                //: l3vpn: finding rt
                 struct prefix_rd prt;
                 struct prefix_rd prt2;
                 prt.family = AF_UNSPEC;
@@ -258,7 +258,7 @@ int bgp_nlri_parse_vpn(struct peer *peer, struct attr *attr,
                  * BGP_LABEL_BYTES + 8 + 8
                  */
                 printf("OK\n");
-                //\m.salari: l3vpn: finding rt
+                //\: l3vpn: finding rt
                 
 		/* Decode RD type. */
 		type = decode_rd_type(pnt + BGP_LABEL_BYTES);
@@ -296,7 +296,7 @@ int bgp_nlri_parse_vpn(struct peer *peer, struct attr *attr,
 			bgp_update(peer, &p, addpath_id, attr, packet->afi,
 				   SAFI_MPLS_VPN, ZEBRA_ROUTE_BGP,
 				   BGP_ROUTE_NORMAL, &prd, &label, 1, 0, NULL);
-                                //m.salari: l3vpn
+                                //: l3vpn
                                 printf(" **** bgp update \t bgp_nlri_parse_vpn > , Decoded_label(Cisco to us) =%u\n", decode_label(&label));
                                 printf("\t\tpeer->bgp->vrf_id=%u\n", peer->bgp->vrf_id);
                                 printf("\t\tpeer->bgp->as=%u\n", peer->bgp->as);
@@ -337,15 +337,15 @@ int bgp_nlri_parse_vpn(struct peer *peer, struct attr *attr,
              *     printf("\t\tpeer->bgp->vpn_policy is NULL\n");
              * 
              */
-            //\m.salari: l3vpn
+            //\: l3vpn
                                 
 		} else {
 			bgp_withdraw(peer, &p, addpath_id, attr, packet->afi,
 				     SAFI_MPLS_VPN, ZEBRA_ROUTE_BGP,
 				     BGP_ROUTE_NORMAL, &prd, &label, 1, NULL);
-                        //m.salari: l3vpn
+                        //: l3vpn
                         printf(" >>>> bgp withdraw > \t bgp_nlri_parse_vpn > , Decoded_label(Cisco to us) =%u\n", decode_label(&label));
-                        //\m.salari: l3vpn
+                        //\: l3vpn
 		}
 	}
 	/* Packet length consistency check. */

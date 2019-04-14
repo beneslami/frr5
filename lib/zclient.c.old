@@ -2540,7 +2540,7 @@ void zebra_read_pw_status_update(int command, struct zclient *zclient,
 	pw->status = stream_getl(s);
 }
 
-//Mehran Memarnejad
+// 
 /*
  * Receive PW mpw-bridge from Zebra and send it to LDE process.
  */
@@ -2839,7 +2839,7 @@ static int zclient_read(struct thread *thread)
 			(*zclient->pw_status_update)(command, zclient, length,
 						     vrf_id);
 		break;
-        //Mehran Memarnejad
+        // 
         case ZEBRA_PW_MPW_BRIDGE:
                 if(zclient->pw_mpw_bridge)
                     (*zclient->pw_mpw_bridge)(command, zclient, length,

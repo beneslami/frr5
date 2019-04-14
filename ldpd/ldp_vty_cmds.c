@@ -33,7 +33,7 @@
 #endif
 // o.zeynalpour
 
-//Mehran Memarnejad
+// 
 extern void ldp_asks_zebra_to_do(uint32_t todo, struct l2vpn *l2vpn, char *br_name);
 
 
@@ -527,7 +527,7 @@ DEFPY  (ldp_bridge,
 	"Bridge interface\n"
 	"Interface's name\n")
 {       
-        //Mehran Memarnejad __VPLS 
+        //  __VPLS 
         int ret;
         
         VTY_DECLVAR_CONTEXT(l2vpn, l2vpn);
@@ -566,7 +566,7 @@ DEFPY  (ldp_member_interface,
 	"Split-Horizon Group\n"
 	"Number Group\n")
 {
-        //Mehran Memarnejad __VPLS
+        //  __VPLS
         int ret;
        // char *shg;
         //strcpy(shg,shgid);
@@ -608,7 +608,7 @@ DEFPY  (ldp_member_interface_shg,
 	"Split-Horizon Group\n"
 	"Number Group\n")
 {
-        //Mehran Memarnejad __VPLS
+        //  __VPLS
         int ret;
        // char *shg;
         //strcpy(shg,shgid);

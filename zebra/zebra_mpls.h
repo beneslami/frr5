@@ -34,14 +34,14 @@
 #include "zebra/zserv.h"
 #include "zebra/zebra_vrf.h"
 
-//Mehran Memarnejad
+// 
 #define VPP_CONF_DIR SYSCONFDIR "vpp-conf/"
 #define VPP_MPLS_FIB VPP_CONF_DIR "vpp-mpls-fib.txt"
 
 //trasfer MPLS data from frr to vpp
 struct vpp_mpls_data {
     
-    //m.salari: l3vpn
+    //: l3vpn
     struct vpp_vrf vrf;
     int is_recursive;
 //    union g_addr recursive_dst;
@@ -49,7 +49,7 @@ struct vpp_mpls_data {
     union g_addr recursive_nexthop;
     mpls_label_t recursive_label;
     int mpls_route_type; //1:Static, 2:LDP, 3:BGP
-    //\m.salari l3vpn
+    //\ l3vpn
     
     //Input label
     mpls_label_t in_label;  //unsigned int

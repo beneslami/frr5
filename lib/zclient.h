@@ -143,7 +143,7 @@ typedef enum {
 	ZEBRA_PW_SET,
 	ZEBRA_PW_UNSET,
 	ZEBRA_PW_STATUS_UPDATE,
-        //Mehran Memarnejad
+        // 
         ZEBRA_PW_MPW_BRIDGE,
         ZEBRA_VPP_BRIDGE,
                 
@@ -256,7 +256,7 @@ struct zclient {
 	int (*local_macip_add)(int, struct zclient *, uint16_t, vrf_id_t);
 	int (*local_macip_del)(int, struct zclient *, uint16_t, vrf_id_t);
 	int (*pw_status_update)(int, struct zclient *, uint16_t, vrf_id_t);
-        //Mehran Memarnejad
+        // 
         int (*pw_mpw_bridge)(int, struct zclient *, uint16_t, vrf_id_t);
         
 	int (*route_notify_owner)(int command, struct zclient *zclient,
@@ -409,7 +409,7 @@ struct zapi_pw_status {
 	uint32_t status;
 };
 
-//Mehran Memarnejad
+// 
 struct zapi_pw_membership {
         char ifname[IF_NAMESIZE];
         char vpp_ifname[IF_NAMESIZE];

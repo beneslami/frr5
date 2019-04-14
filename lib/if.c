@@ -395,7 +395,7 @@ struct interface *if_get_by_name(const char *name, vrf_id_t vrf_id, int vty)
 	ifp = if_lookup_by_name_all_vrf(name);
 	if (!ifp)
 		return if_create(name, vrf_id);
-	//Mehran Memarnejad
+	// 
     //I think this part of FRR code is not correct -> so I comment it
     //Let it continue to update ifp->vrf_id
 	//if (vty) {
@@ -677,7 +677,7 @@ DEFUN (interface,
 	if (vrfname)
 		VRF_GET_ID(vrf_id, vrfname);
 		
-	//Mehran Memarnejad
+	// 
     char cmd[200];
     if(vrfname){ //Custom VRF
         sprintf(cmd,"sudo ip link set dev %s master %s", ifname , vrfname);
@@ -1132,7 +1132,7 @@ void if_terminate(struct vrf *vrf)
 	}
 }
 
-//Mehran Memarnejad
+// 
 //Don't delete if, instead update its vrf
 void vpp_if_terminate(struct vrf *vrf)
 {

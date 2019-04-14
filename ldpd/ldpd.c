@@ -126,7 +126,7 @@ static struct option longopts[] =
 	{ 0 }
 };
 
-//Mehran Memarnejad
+// 
 /*#############################################################
  #############    Interface Name Mapping          #############
  ##############################################################*/
@@ -142,7 +142,7 @@ int nic_names_refill()
     sprintf(str, "sudo vppctl show tap-inject | awk \'{print $0}\' | wc -l");
     int LINE_BUFSIZE = 100;
     char line[LINE_BUFSIZE];
-    //Mehran 
+    // 
     FILE * pipe = popen(str, "r");
     fgets(line, LINE_BUFSIZE, pipe);
     sscanf(line, "%d\n", &nic_names_n);

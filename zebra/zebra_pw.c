@@ -44,7 +44,7 @@ DEFINE_HOOK(pw_uninstall, (struct zebra_pw * pw), (pw))
 
 extern struct zebra_t zebrad;
 
-//Mehran Memarnejad
+// 
 //In order to check deletion of mpls-tunnel use "vppctl show mpls tunnel" command not the "vppctl sh int" command
 //"mpls tunnel del mpls-tunnel0 l2-only via 2.1.1.2" ... I think the rest of cmd is optional for deletion
 void detach_iface_from_bridge(char *ifname);
@@ -499,7 +499,7 @@ static void zebra_pw_install(struct zebra_pw *pw)
 
 static void zebra_pw_uninstall(struct zebra_pw *pw)
 {
-        //Mehran Memarnejad
+        // 
         //Just a quick treatment
         del_mpls_tunnel(pw);
         
@@ -858,7 +858,7 @@ void zebra_pw_vty_init(void)
 
 	install_element(VIEW_NODE, &show_pseudowires_cmd);
         
-        //Mehran Memarnejad
+        // 
         hook_register(pw_install, add_mpls_tunnel);
         hook_register(pw_uninstall, del_mpls_tunnel);
         

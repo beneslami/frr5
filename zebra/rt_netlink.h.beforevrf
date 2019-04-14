@@ -55,14 +55,14 @@
 #define RTPROT_PBR         195
 #define RTPROT_ZSTATIC     196
 
-//Mehran Memarnejad
+// 
 //Global variable to gather information from different parts of code
 struct vpp_mpls_data vpp_data;
 
 /*#############################################################
  #############        Function prototype          #############
  ##############################################################*/
-//Mehran Memarnejad
+// 
 //Global defenition of data struct (to be available for all functions)
 //This is the pointer to the head
 //We may use some mechanisem like malloc to get new vpp_mpls_data node (not now) for now just a simple solution (no linked list)

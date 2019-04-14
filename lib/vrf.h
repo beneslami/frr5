@@ -51,7 +51,7 @@ enum { IFLA_VRF_UNSPEC, IFLA_VRF_TABLE, __IFLA_VRF_MAX };
 #define VRF_FULL_CMD_HELP_STR   "Specify the VRF\nThe VRF name\nAll VRFs\n"
 
 
-//Mehran Memarnejad
+// 
 #define VPP_MAX_VRF 1000
 //let it be global for now
 uint32_t vpp_num_vrf;
@@ -70,7 +70,7 @@ void vpp_upd_vrf_fields(char* name, vrf_id_t vrf_id, uint32_t table_id);
 void vpp_del_vrf(char* name, vrf_id_t vrf_id, uint32_t table_id);
 uint32_t vpp_vrf_name_to_table_id(char* name);
 int vpp_vrf_id_to_table_id(vrf_id_t vrf_id);
-char* vpp_vrf_id_to_name(vrf_id_t vrf_id); //m.salari 
+char* vpp_vrf_id_to_name(vrf_id_t vrf_id); // 
 
 /*
  * Pass some OS specific data up through

@@ -990,7 +990,7 @@ static int zsend_table_manager_connect_response(struct zserv *client,
 	return zserv_send_message(client, s);
 }
 
-//Mehran Memarnejad
+// 
 //Function to send mpw_bridge membership from zebra to ldpd
 int zsend_pw_set_mpw_bridge(struct zserv *client, struct zebra_pw *pw, char *mpls_tunnel){
     
@@ -1017,7 +1017,7 @@ int zsend_pw_set_mpw_bridge(struct zserv *client, struct zebra_pw *pw, char *mpl
     return zserv_send_message(client, s);
 }
 
-//Mehran Memarnejad
+// 
 //Frr3
 //static int zread_vpp_bridge(struct zserv *client, u_short length, struct zebra_vrf *zvrf)
 static int zread_vpp_bridge(ZAPI_HANDLER_ARGS)
@@ -3163,7 +3163,7 @@ void (*zserv_handlers[])(ZAPI_HANDLER_ARGS) = {
 	[ZEBRA_PW_DELETE] = zread_pseudowire,
 	[ZEBRA_PW_SET] = zread_pseudowire,
 	[ZEBRA_PW_UNSET] = zread_pseudowire,
-        //Mehran Memarnejad
+        // 
         [ZEBRA_VPP_BRIDGE] = zread_vpp_bridge,
         
 	[ZEBRA_RULE_ADD] = zread_rule,

@@ -548,7 +548,7 @@ l2vpn_pw_status_update(struct zapi_pw_status *zpw)
 	return (0);
 }
 
-//Mehran Memarnejad
+// 
 int
 l2vpn_pw_mpw_bridge(struct zapi_pw_membership *zpw)
 {

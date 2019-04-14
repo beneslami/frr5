@@ -36,7 +36,7 @@
 #include "privs.h"
 #include "nexthop_group.h"
 
-//Mehran Memarnejad
+// 
 void vpp_del_vrf_fields(int idx){
  
     vpp_vrf_list[idx].name[0] = "\0";
@@ -147,7 +147,7 @@ int vpp_vrf_id_to_table_id(vrf_id_t vrf_id){
     return -1;
 }
 
-//m.salari 
+// 
 char* vpp_vrf_id_to_name(vrf_id_t vrf_id){
     int idx = 0;
     if(vrf_id >= 0){
@@ -158,7 +158,7 @@ char* vpp_vrf_id_to_name(vrf_id_t vrf_id){
             return NULL;
     return vpp_vrf_list[idx].name;
 }
-//\m.salari 
+//\ 
 
 /* default VRF ID value used when VRF backend is not NETNS */
 #define VRF_DEFAULT_INTERNAL 0
@@ -292,9 +292,9 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
 	if (!vrf && vrf_id != VRF_UNKNOWN)
 		vrf = vrf_lookup_by_id(vrf_id);
 
-        int newvrf = 0;//m.salari
+        int newvrf = 0;//
 	if (vrf == NULL) {
-            newvrf = 1;//m.salari
+            newvrf = 1;//
                 
 		vrf = XCALLOC(MTYPE_VRF, sizeof(struct vrf));
 		vrf->vrf_id = VRF_UNKNOWN;
@@ -324,9 +324,9 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
 	if (new &&vrf_master.vrf_new_hook)
 		(*vrf_master.vrf_new_hook)(vrf);
 
-        //m.salari
+        //
         if (newvrf) {
-                //Mehran Memarnejad
+                // 
                 //If vrf not found create it in Linux
                 //Linux already has default vrf, so no need to create it again
                 if(strcmp(name, VRF_DEFAULT_NAME)){
@@ -347,7 +347,7 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
                     //add it to vpp_vrf_list   table_id = vpp_num_vrf
 //                    vpp_add_vrf(name, VRF_UNKNOWN, vpp_num_vrf);        
                     
-                    vpp_add_vrf(name, vrf->vrf_id, vpp_num_vrf); //m.salari
+                    vpp_add_vrf(name, vrf->vrf_id, vpp_num_vrf); //
                     //deleteme
                     printf("%s: VRF ADD %u\n", __func__, vrf->vrf_id);
                     int i;
@@ -357,7 +357,7 @@ struct vrf *vrf_get(vrf_id_t vrf_id, const char *name)
                     //\deleteme
                 }
         }
-        //\m.salari
+        //\
 
 	return vrf;
 }
@@ -394,7 +394,7 @@ void vrf_delete(struct vrf *vrf)
 		(*vrf_master.vrf_delete_hook)(vrf);
 
 	QOBJ_UNREG(vrf);
-        //Mehran Memarnejad
+        // 
         //Don't delete interfaces, instead bind it to default VRF
         //if default vrf is to be deleted, then delete interfaces as well, else bind interfaces to default vrf
         if(vrf->vrf_id == 0)
@@ -407,7 +407,7 @@ void vrf_delete(struct vrf *vrf)
 	if (vrf->name[0] != '\0')
 		RB_REMOVE(vrf_name_head, &vrfs_by_name, vrf);
         
-        //Mehran Memarnejad
+        // 
         int table_id;
         table_id = vpp_vrf_id_to_table_id(vrf->vrf_id);
         //Don't delete vpp default vrf ... it's not possible to delete vpp default vrf
@@ -660,7 +660,7 @@ void vrf_init(int (*create)(struct vrf *), int (*enable)(struct vrf *),
 
 	cmd_variable_handler_register(vrf_var_handlers);
         
-        //Mehran Memarnejad
+        // 
         //VRF Initilization tasks
         printf("Vrf Initilization...\n");
         vpp_num_vrf = 0;
@@ -796,10 +796,10 @@ int vrf_handler_create(struct vty *vty, const char *vrfname,
 
 	if (vrf)
 		*vrf = vrfp;
-        //m.salari
+        //
         struct vrf * vrf2 = vrf_lookup_by_name(vrfname);
         printf(" -*-*-*-* %u\n", vrf2->vrf_id);
-        //\m.salari
+        //\
         
 	return CMD_SUCCESS;
 }
@@ -929,7 +929,7 @@ DEFUN_NOSH (no_vrf,
 	//	vty_out(vty, "%% Only inactive VRFs can be deleted\n");
 	//	return CMD_WARNING_CONFIG_FAILED;
 	//}
-        //Mehran Memarnejad
+        // 
         char cmd[200];
         sprintf(cmd, "sudo ip link set dev %s down", vrfname);
         printf("%s: %s\n", __func__, cmd);
@@ -940,7 +940,7 @@ DEFUN_NOSH (no_vrf,
         //Don't delete it here, let Linux inform FRR about "ip link del" command and then netlink_vrf_change in if_netlink.c will delete it 
 	//vrf_delete(vrfp);
         
-        //Mehran Memarnejad
+        // 
         //char cmd[200];
         sprintf(cmd, "sudo ip link del dev %s", vrfname);
         printf("%s: %s\n", __func__, cmd);

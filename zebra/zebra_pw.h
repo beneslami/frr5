@@ -31,7 +31,7 @@
 
 #define PW_INSTALL_RETRY_INTERVAL	30
 
-//Mehran Memarnejad
+// 
 //To save an association between mpw-mpls_tunnel names
 char ** mpw_names_frr;  //MUST be global
 char ** mpls_tunnel_names_vpp;  //MUST be global
